@@ -37,17 +37,22 @@ export const SliderImage = styled.img`
     bottom: 0%;
 `;
 
-export const SliderTitle = styled.p`
+export const SliderTitle = styled.h1`
     color: ${theme.colors.white};
     // height: 39.44%;
     // width: 95.76%;
     // display: flex;
     // margin-left: 11px;
+    // position: absolute;
+    // left: 52.17%;
+    // right: 22.73%;
+    // top: 36.5%;
+    // bottom: 53%;
     position: absolute;
-    left: 52.17%;
-    right: 22.73%;
-    top: 36.5%;
-    bottom: 53%;
+    width: 499px;
+    top: 292px;
+    left: 1033px;
+    letter-spacing: 0;
     font-family: 'Roboto';
     font-size: 72px;
     font-weight: 700;
@@ -59,11 +64,15 @@ export const SliderSubtitle = styled.p`
     // height: 26.29%;
     // align-self: stretch;
     // margin-bottom: 13px;
+    // position: absolute;
+    // left: 51.62%;
+    // right: 22.17%;
+    // top: 47%;
+    // bottom: 46%;
     position: absolute;
-    left: 51.62%;
-    right: 22.17%;
-    top: 47%;
-    bottom: 46%;
+    top: 376px;
+    left: 1022px;
+    letter-spacing: 0;
     font-family: 'Roboto';
     font-size: 48px;
     font-weight: 400;
@@ -72,28 +81,17 @@ export const SliderSubtitle = styled.p`
 
 export const ButtonDiv = styled.div`
     // position: absolute;
-    left: 56.69%;
-    right: 28.17%;
-    top: 55.62%;
-    bottom: 36.88%;
+    // left: 56.69%;
+    // right: 28.17%;
+    // top: 55.62%;
+    // bottom: 36.88%;
     // width: 300px;
-`;
-
-export const SliderButtonText = styled.p`
-    color: ${theme.colors.white};
-    // width: 100%;
-    // align-self: stretch;
-    // display: flex;
     position: absolute;
-    left: 58.66%;
-    right: 30.14%;
-    top: 57.25%;
-    bottom: 38.38%;
-    font-family: ${theme.fonts.roboto30Regular.family};
-    font-size: ${theme.fonts.roboto30Regular.size};
-    font-weight: ${theme.fonts.roboto30Regular.weight};
-    line-height: ${theme.fonts.roboto30Regular.lineHeight};
-    text-align: center;
+    height: 60px;
+    top: 500px;
+    left: 1100px;
+    display: flex;
+    align-items: flex-start;
 `;
 
 export const SliderButton = styled.div`
@@ -102,9 +100,36 @@ export const SliderButton = styled.div`
     // padding: 13px 38.98px 12px;
     // display: flex;
     // align-items: center;
+    // position: absolute;
+    // left: 56.69%;
+    // right: 28.17%;
+    // top: 55.62%;
+    // bottom: 36.88%;
+    height: 60px;
+    display: flex;
+    padding: 12px 37px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-width: 300px;
+`;
+
+export const SliderButtonText = styled.p`
+    color: ${theme.colors.white};
+    // width: 100%;
+    // align-self: stretch;
+    // display: flex;
+    // position: absolute;
+    // left: 58.66%;
+    // right: 30.14%;
+    // top: 57.25%;
+    // bottom: 38.38%;
     position: absolute;
-    left: 56.69%;
-    right: 28.17%;
-    top: 55.62%;
-    bottom: 36.88%;
+    width: 224px;
+    min-height: 35px;
+    letter-spacing: 0;
+    font-family: ${theme.fonts.roboto30Regular.family};
+    font-size: ${theme.fonts.roboto30Regular.size};
+    font-weight: ${theme.fonts.roboto30Regular.weight};
+    line-height: ${theme.fonts.roboto30Regular.lineHeight};
+    text-align: center;
 `;
