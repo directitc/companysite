@@ -8,17 +8,19 @@ import Services from './pages/Services/Services';
 import Contact from './pages/Contact/Contact';
 
 function App() {
-  return (
-    <Router>
-      <NavBar />
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' exact component={About} />
-        <Route path='/services' exact component={Services} />
-        <Route path='/contact' exact component={Contact} />
-      </Switch>
-    </Router>
-  );
+    return (
+        <div className="App">
+            <Router>
+                {/* <NavBar /> */}
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/about" exact component={About} />
+                    <Route path="/services" exact component={Services} />
+                    <Route path="/contact" exact component={Contact} />
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

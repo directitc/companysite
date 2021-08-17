@@ -10,7 +10,7 @@ const theme = {
     fonts: {
         roboto30Regular: {
             family: 'Roboto',
-            size: '30px',
+            size: '24px',
             weight: '400',
             lineHeight: 'normal',
         },

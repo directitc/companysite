@@ -14,15 +14,14 @@ const Slider = () => {
     return (
         <div>
             <Slider1>
-                <RadialBackground>
-                    <SliderImage />
+                <SliderImage src="https://static.overlay-tech.com/assets/1fdfbe92-b98f-41b5-bb87-029bd1b19e5d.png"/>
+                    <RadialBackground />
                     <SliderTitle>Data Migration</SliderTitle>
                     <SliderSubtitle>transfer and consolidate</SliderSubtitle>
                     <ButtonDiv>
-                        <SliderButton/>
-                            <SliderButtonText>Learn More</SliderButtonText>
+                        <SliderButton />
+                        <SliderButtonText>Learn More</SliderButtonText>
                     </ButtonDiv>
-                </RadialBackground>
             </Slider1>
         </div>
     );

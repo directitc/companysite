@@ -4,18 +4,19 @@ import NavBar from '../../components/NavBar/NavBar';
 import Logo from '../../components/Logo/Logo';
 import Arrows from '../../components/Arrows/Arrows';
 
-import { StyledHomePage, FlexWrapperSix } from './Home.styles';
+import { StyledHomePage, StyledHeader } from './Home.styles';
 
 const HomePage = () => {
     return (
         <StyledHomePage>
-            <FlexWrapperSix>
-                <Slider1 />
-                <Ellipses />
-                {/* <Arrows /> */}
-                <NavBar />
+            <StyledHeader>
                 <Logo />
-            </FlexWrapperSix>
+                <NavBar />
+            </StyledHeader>
+
+            {/* <Slider1 />
+            <Ellipses /> */}
+            {/* <Arrows /> */}
             {/* <StyledAboutSection />
             <StyledServicesSection />
             <StyledFooter />

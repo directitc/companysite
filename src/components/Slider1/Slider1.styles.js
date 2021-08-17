@@ -2,18 +2,18 @@ import styled from 'styled-components';
 import theme from '../../styles/Global.styles';
 
 export const Slider1 = styled.div`
-    background-image: url('https://static.overlay-tech.com/assets/1fdfbe92-b98f-41b5-bb87-029bd1b19e5d.png');
+    // background-image: url('https://static.overlay-tech.com/assets/1fdfbe92-b98f-41b5-bb87-029bd1b19e5d.png');
     // background-size: 100% 100%;
     // background-position: center;
     // padding: 292px 439px 295px 1022px;
     // display: flex;
     // flex-direction: column;
     // align-items: flex-start;
-    position: absolute;
-    width: 1980px;
+    position: relative;
+    width: auto;
     height: 800px;
-    left: 0px;
-    top: 0px;
+    // left: 0px;
+    // top: 0px;
 `;
 
 export const RadialBackground = styled.div`
@@ -30,11 +30,8 @@ export const RadialBackground = styled.div`
 `;
 
 export const SliderImage = styled.img`
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    max-width: 100%;
+    height: auto;
 `;
 
 export const SliderTitle = styled.h1`
