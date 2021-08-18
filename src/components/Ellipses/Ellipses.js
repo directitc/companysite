@@ -1,14 +1,13 @@
 import React from 'react';
-
-import { EllipseGroup, Ellipse1, Ellipse2, Ellipse3 } from './Ellipses.styles';
+import './Ellipses.css';
 
 const Ellipses = () => {
     return (
-        <EllipseGroup>
-            <Ellipse1 />
-            <Ellipse2 />
-            <Ellipse3 />
-        </EllipseGroup>
+        <div className="ellipses">
+            <div className="ellipse-active" />
+            <div className="ellipse" />
+            <div className="ellipse" />
+        </div>
     );
 };
 

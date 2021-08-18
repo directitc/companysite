@@ -1,0 +1,48 @@
+.button-wrapper {
+    border: 3px solid red;
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.fstart {
+    justify-content: flex-start;
+}
+
+@media (max-width: 655px) {
+    .button-wrapper {
+        width: 100%;
+    }
+}
+
+.button {
+    background-color: rgba(190, 183, 124, 1);
+    color: white;
+    width: 200px;
+    height: 25px;
+    display: flex;
+    padding: 12px 37px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .button {
+        font-size: 20px;
+        width: 150px;
+        height: 15px;
+    }
+}
+@media (max-width: 655px) {
+    .button {
+        font-size: 20px;
+        width: 150px;
+        height: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+.header {
+    border: 3px solid purple;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    height: 300px;
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 0px;
+        height: auto;
+        justify-content: center;
+    }
+}

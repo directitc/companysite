@@ -1,0 +1,27 @@
+.title {
+    border: 3px solid red;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    letter-spacing: 0;
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.fstart {
+    justify-content: flex-start;
+}
+
+.dark-gray {
+    color: rgb(71, 71, 71);
+}
+
+@media (max-width: 655px) {
+    .title {
+        width: 100%;
+        font-size: 40px;
+    }
+}

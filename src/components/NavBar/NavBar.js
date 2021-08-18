@@ -1,18 +1,19 @@
 import React from 'react';
-
-import { Nav, NavLink, Bars, NavMenu } from './NavBar.styles';
+import { FaBars } from 'react-icons/fa';
+import { NavLink as Link } from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = () => {
     return (
-        <Nav>
-            <Bars />
-            <NavMenu>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/services">Services</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
-            </NavMenu>
-        </Nav>
+        <nav className="navbar">
+            <FaBars className="bars" />
+            <div className="navbar-menu">
+                <Link className="navbar-link" to="/">Home</Link>
+                <Link className="navbar-link" to="/about">About</Link>
+                <Link className="navbar-link" to="/services">Services</Link>
+                <Link className="navbar-link" to="/contact">Contact</Link>
+            </div>
+        </nav>
     );
 };
 

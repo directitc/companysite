@@ -1,0 +1,32 @@
+.slider1-section {
+    border: 3px solid cyan;
+    /* position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    height: 350px; */
+}
+
+.slider1-subsection {
+    border: 3px solid limegreen;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+}
+@media (max-width: 1200px) {
+    .slider1-subsection {
+        /* width: 500px; */
+        /* height: auto; */
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .slider1-subsection {
+        margin-top: 5%;
+        justify-content: center;
+    }
+}

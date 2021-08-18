@@ -1,14 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { ArrowGroup, ArrowLeft, ArrowRight } from './Arrows.styles';
+import { FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft } from 'react-icons/fa';
+import './Arrows.css';
 
 const Arrows = () => {
     return (
-        <ArrowGroup>
-            <FontAwesomeIcon icon={['fas', 'chevron-right']} />
-            <FontAwesomeIcon icon={['fas', 'coffee']} />
-        </ArrowGroup>
+        <div className="arrows">
+            <FaChevronLeft className="arrow-left" />
+            <FaChevronRight className="arrow-right" />
+        </div>
     );
 };
 

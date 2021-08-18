@@ -1,28 +1,24 @@
-import Slider1 from '../../components/Slider1/Slider1';
-import Ellipses from '../../components/Ellipses/Ellipses';
-import NavBar from '../../components/NavBar/NavBar';
-import Logo from '../../components/Logo/Logo';
+import Slider1 from '../../components/Sections/Slider1/Slider1';
+import About from '../../components/Sections/About/About';
+import Section from '../../components/Sections/Section/Section';
 import Arrows from '../../components/Arrows/Arrows';
+import './Home.css';
 
-import { StyledHomePage, StyledHeader } from './Home.styles';
-
-const HomePage = () => {
+const Home = () => {
     return (
-        <StyledHomePage>
-            <StyledHeader>
-                <Logo />
-                <NavBar />
-            </StyledHeader>
+        <div className="home">
+            <Section>
+                <Slider1 />
+            </Section>
+            <Section>
+                <About />
+            </Section>
 
-            {/* <Slider1 />
-            <Ellipses /> */}
-            {/* <Arrows /> */}
-            {/* <StyledAboutSection />
-            <StyledServicesSection />
+            {/* <StyledServicesSection />
             <StyledFooter />
             <StyledCopyright /> */}
-        </StyledHomePage>
+        </div>
     );
 };
 
-export default HomePage;
+export default Home;
