@@ -5,13 +5,12 @@ import Text from '../../Text/Text';
 import List from '../../List/List';
 import Link from '../../Link/Link';
 import Icon from '../../Icon/Icon';
-import ContactLogo from '../../../assets/images/contact-logo.png';
 import Image from '../../Image/Image';
 import ContactForm from '../../Forms/ContactForm/ContactForm';
 import { FaPhone, FaRegEnvelope } from 'react-icons/fa';
 import './Contact.css';
 
-const Contact = () => {
+const Contact = ({ classStyle, image }) => {
     const contactUs = 'Contact Us';
     const sitemap = 'Sitemap';
     const subtitle1 = 'Send us a message';
@@ -25,7 +24,7 @@ const Contact = () => {
     const sitemapList = ['Home', 'About', 'Services', 'Contact Us'];
 
     return (
-        <div className="w3-padding-64 w3-container contact-background">
+        <div className={classStyle}>
             <div className={styledDiv}>
                 <Title classStyle={styledTitle} title={contactUs} />
                 <Subtitle classStyle={styledSubtitle} subtitle={subtitle1} />
@@ -39,7 +38,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className={styledDiv}>
-                <Image src={ContactLogo} />
+                <Image src={image} />
                 <div className={'contact-text-wrapper'}>
                     <div>
                         <Icon classStyle={'icon'} icon={<FaPhone />} />

@@ -1,0 +1,8 @@
+.header-subsection {
+    /* border: 3px solid plum; */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 1000px;
+}
