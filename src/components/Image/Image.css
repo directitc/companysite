@@ -1,0 +1,19 @@
+.image-wrapper {
+    /* border: 3px solid red; */
+    /* width: 30%; */
+    /* margin-right: 80px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.image {
+    max-width: 90%;
+    height: auto;
+}
+
+/* @media (max-width: 768px) {
+    .image {
+        width: 200px;
+    }
+} */

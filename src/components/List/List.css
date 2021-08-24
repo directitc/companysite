@@ -1,0 +1,12 @@
+.list-unordered {
+    /* border: 3px solid green; */
+    width: 100%;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.list-unordered li:hover {
+    color: gray;
+}

@@ -1,21 +1,17 @@
-.button-wrapper {
-    border: 3px solid red;
+.button-center {
+    /* border: 3px solid red; */
     position: relative;
-    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1%;
 }
 
-.fstart {
+.button-fstart {
+    /* border: 3px solid red; */
+    position: relative;
+    display: flex;
     justify-content: flex-start;
-}
-
-@media (max-width: 655px) {
-    .button-wrapper {
-        width: 100%;
-    }
+    align-items: center;
 }
 
 .button {
@@ -32,17 +28,32 @@
     font-weight: 400;
     text-align: center;
 }
-@media (max-width: 768px) {
-    .button {
-        font-size: 20px;
-        width: 150px;
-        height: 15px;
-    }
+
+/* 294 */
+.w3-button {
+    /* border: 3px solid red; */
+    width: 200px;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(190, 183, 124, 1);
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
 }
-@media (max-width: 655px) {
-    .button {
-        font-size: 20px;
-        width: 150px;
-        height: 10px;
+
+@media (max-width: 768px) {
+    .button-fstart {
+        /* border: 3px solid red; */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

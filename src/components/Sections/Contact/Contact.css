@@ -1,0 +1,38 @@
+.contact-background {
+    background-color: #DDDDDD;
+}
+
+.contact-color {
+    color: #000;
+}
+
+.contact-subtitle {
+    /* border: 3px solid blue; */
+    color: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    letter-spacing: 0;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contact-list-wrapper {
+    /* border: 3px solid blue; */
+    text-align: center;
+    list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-text-wrapper {
+    font-size: 20px;
+    line-height: 1.7em;
+}
+
+.contact-button-background {
+    background-color: #333333;
+}

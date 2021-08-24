@@ -1,10 +1,10 @@
 import React from 'react';
 import './Text.css';
 
-const Text = ({ text }) => {
+const Text = ({ classStyle, text }) => {
     return (
-        <div className="text-box">
-            <p className="text">{text}</p>
+        <div>
+            <p className={classStyle}>{text}</p>
         </div>
     );
 };

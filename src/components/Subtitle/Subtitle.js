@@ -1,8 +1,8 @@
 import React from 'react';
 import './Subtitle.css';
 
-const Subtitle = ({ subtitle }) => {
-    return <div className="subtitle">{subtitle}</div>;
+const Subtitle = ({ classStyle, subtitle }) => {
+    return <span className={classStyle}>{subtitle}</span>;
 };
 
 export default Subtitle;

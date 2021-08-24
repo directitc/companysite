@@ -1,19 +1,17 @@
 .logo {
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     width: 467px;
-    /* height: 139px;
-    left: 368px;
-    top: 86px; */
     margin: auto;
     z-index: 12;
 }
-@media (max-width: 768px) {
+@media (max-width: 550px) {
     .logo {
-    width: 350px;
+        width: 450px;
+        margin-top: 60px;
     }
 }
 @media (max-width: 546px) {
     .logo {
-    width: 250px;
+        /* width: 250px; */
     }
 }
