@@ -10,8 +10,3 @@
         margin-top: 60px;
     }
 }
-@media (max-width: 546px) {
-    .logo {
-        /* width: 250px; */
-    }
-}

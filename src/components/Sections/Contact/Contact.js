@@ -2,25 +2,22 @@ import React from 'react';
 import Title from '../../Title/Title';
 import Subtitle from '../../Subtitle/Subtitle';
 import Text from '../../Text/Text';
-import Button from '../../Button/Button';
 import List from '../../List/List';
 import Link from '../../Link/Link';
 import Icon from '../../Icon/Icon';
 import ContactLogo from '../../../assets/images/contact-logo.png';
 import Image from '../../Image/Image';
 import ContactForm from '../../Forms/ContactForm/ContactForm';
-import { FaEnvelope, FaPhone, FaRegEnvelope } from 'react-icons/fa';
+import { FaPhone, FaRegEnvelope } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
     const contactUs = 'Contact Us';
     const sitemap = 'Sitemap';
-    const name = 'Submit';
     const subtitle1 = 'Send us a message';
     const subtitle2 = 'All our pages';
     const subtitle3 = 'Already with us?';
     const styledDiv = 'w3-third w3-center w3-padding-16';
-    const styledImage = 'w3-image';
     const styledTitle = 'title contact-color';
     const styledSubtitle = 'contact-subtitle contact-color';
     const styledDivList = 'contact-list-wrapper';
@@ -58,7 +55,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className={'contact-text-wrapper w3-padding-top-32'}>
-                    <Text classStyle={'text'} text={'Already with us?'} />
+                    <Text classStyle={'text'} text={subtitle3} />
                     <Text
                         classStyle={'text'}
                         text={'Send your questions here:'}
