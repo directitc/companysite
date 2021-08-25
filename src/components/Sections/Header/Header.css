@@ -1,8 +1,24 @@
+.header-section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+}
+
 .header-subsection {
-    /* border: 3px solid plum; */
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 1000px;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        justify-content: center;
+        margin-top: 5%;
+        width: 100%;
+    }
 }
