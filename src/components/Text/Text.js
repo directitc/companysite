@@ -3,9 +3,9 @@ import './Text.css';
 
 const Text = ({ classStyle, text }) => {
     return (
-        <div>
-            <p className={classStyle}>{text}</p>
-        </div>
+        // <div>
+            <span className={classStyle}>{text}</span>
+        // </div>
     );
 };
 

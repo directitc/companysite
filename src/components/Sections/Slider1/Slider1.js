@@ -24,7 +24,7 @@ const Slider = () => {
                 <div className="slider1-subsection">
                     <Title classStyle={'title'} title={title} />
                     <Subtitle
-                        classStyle={'subtitle w3-xlarge'}
+                        classStyle={'subtitle'}
                         subtitle={subtitle}
                     ></Subtitle>
                     <div className="slider1-button-wrapper w3-padding-16">

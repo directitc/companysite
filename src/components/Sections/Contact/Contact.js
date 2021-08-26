@@ -18,7 +18,7 @@ const Contact = ({ classStyle, image }) => {
     const subtitle3 = 'Already with us?';
     const styledDiv = 'w3-third w3-center w3-padding-16';
     const styledTitle = 'title contact-color';
-    const styledSubtitle = 'contact-subtitle contact-color';
+    const styledSubtitle = 'contact-subtitle';
     const styledDivList = 'contact-list-wrapper';
     const styledList = '';
     const sitemapList = ['Home', 'About', 'Services', 'Contact Us'];
@@ -38,11 +38,17 @@ const Contact = ({ classStyle, image }) => {
                 </div>
             </div>
             <div className={styledDiv}>
-                <Image src={image} />
+                <div>
+                    <Image classStyle={'contact-data-image'} src={image} />
+                </div>
                 <div className={'contact-text-wrapper'}>
                     <div>
                         <Icon classStyle={'icon'} icon={<FaPhone />} />
-                        <Link classStyle={'link'} href={'tel:801-660-7780'} link={'(801) 660-7780'} />
+                        <Link
+                            classStyle={'link'}
+                            href={'tel:801-660-7780'}
+                            link={'(801) 660-7780'}
+                        />
                     </div>
                     <div>
                         <Icon classStyle={'icon'} icon={<FaRegEnvelope />} />

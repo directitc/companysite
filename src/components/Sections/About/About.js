@@ -26,7 +26,7 @@ const AboutSection = () => {
                         classStyle={'title title-fstart title-dark-gray'}
                         title={title}
                     />
-                    <Text classStyle={'about-text'} text={text} />
+                    <Text classStyle={'about-text w3-padding-16'} text={text} />
                     <div className="about-button-wrapper">
                         <Button
                             classStyle={'w3-button w3-large'}

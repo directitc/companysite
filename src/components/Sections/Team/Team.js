@@ -56,7 +56,7 @@ const Team = ({ classStyle }) => {
                 <div className='team-contact'>
                     <Icon classStyle={'icon'} icon={<FaPhone />} />
                     <Link
-                        classStyle={'link'}
+                        classStyle={'link team-text'}
                         href={'tel:' + teamList[i].phone}
                         link={teamList[i].phone}
                     />
@@ -64,7 +64,7 @@ const Team = ({ classStyle }) => {
                 <div>
                     <Icon classStyle={'icon'} icon={<FaRegEnvelope />} />
                     <Link
-                        classStyle={'link'}
+                        classStyle={'link team-text'}
                         href={'mailto:' + teamList[i].email}
                         link={teamList[i].email}
                     />

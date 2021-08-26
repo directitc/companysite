@@ -17,7 +17,7 @@ const Header = ({ classStyle, title, subtitle }) => {
                 <div className="header-subsection">
                     <Title classStyle={'title title-fstart'} title={title} />
                     <Subtitle
-                        classStyle={'subtitle subtitle-fstart w3-xlarge'}
+                        classStyle={'subtitle subtitle-fstart'}
                         subtitle={subtitle}
                     ></Subtitle>
                 </div>
