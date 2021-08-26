@@ -1,9 +1,3 @@
-.slider1-section {
-    /* border: 3px solid cyan; */
-    width: 100%;
-    height: 600px;
-}
-
 .slider1-header {
     /* border: 3px solid limegreen; */
     position: relative;
@@ -31,19 +25,7 @@
     justify-content: center;
 }
 
-@media (max-width: 1200px) {
-    .slider1-section {
-        height: 550px;
-    }
-    .slider1-header {
-        justify-content: center;
-    }
-}
-
 @media (max-width: 768px) {
-    .slider1-section {
-        height: 425px;
-    }
     .slider1-header {
         margin-top: 40px;
         justify-content: center;

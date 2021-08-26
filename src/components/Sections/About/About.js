@@ -3,7 +3,7 @@ import Button from '../../Button/Button';
 import Title from '../../Title/Title';
 import Text from '../../Text/Text';
 import Image from '../../Image/Image';
-import img1 from '../../../assets/images/about-us-image.png';
+import AboutUsImage from '../../../assets/images/about-us-image.png';
 import './About.css';
 
 const AboutSection = () => {
@@ -14,13 +14,10 @@ const AboutSection = () => {
 
     return (
         <div className="w3-padding-64 w3-container">
-            <div className="w3-content">
-                <Image
-                    classStyle={
-                        'w3-third w3-center w3-padding-large w3-padding-32'
-                    }
-                    src={img1}
-                />
+            <div className="w3-content about-section">
+                <div className="w3-third w3-center w3-padding-small w3-padding-32">
+                    <Image classStyle={'about-image'} src={AboutUsImage} />
+                </div>
                 <div className="w3-twothird w3-padding-large w3-padding-32">
                     <Title
                         classStyle={'title title-fstart title-dark-gray'}

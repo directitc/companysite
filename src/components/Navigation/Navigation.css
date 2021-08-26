@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
     width: 100%;
@@ -12,12 +13,6 @@
     .navigation {
         padding: 0px;
         height: auto;
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 550px) {
-    .navigation {
         flex-wrap: wrap-reverse;
     }
 }

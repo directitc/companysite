@@ -1,36 +1,36 @@
-.data-migration h1 {
+.system-integration h1 {
     /* border: 3px solid green; */
     padding-bottom: 10px;
 }
 
-.data-migration-section {
+.system-integration-section {
     /* border: 3px solid green; */
     /* height: 500px; */
     width: 100%;
     display: flex;
 }
 
-.data-migration-image {
+.system-integration-image {
     /* border: 3px solid pink; */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.data-migration-list {
+.system-integration-list {
     /* border: 3px solid green; */
     padding-bottom: 10px;
     display: flex;
 }
 
-.data-migration-icon {
+.system-integration-icon {
     /* border: 3px solid red; */
     color: rgba(0, 0, 0, 0.6);
     padding-top: 4px;
     font-size: 12px;
 }
 
-.data-migration-text {
+.system-integration-text {
     /* border: 3px solid blue; */
     color: rgba(0, 0, 0, 0.6);
     position: relative;
@@ -43,7 +43,7 @@
 }
 
 @media (max-width: 768px) {
-    .data-migration-section {
+    .system-integration-section {
         flex-wrap: wrap;
     }
 }

@@ -9,7 +9,7 @@ import './About.css';
 const About = () => {
     const title = 'About Us';
     const subtitle = 'Meet the team';
-    const styledHeader = 'w3-padding-32 w3-container about-header';
+    const styledHeader = 'w3-padding-bottom-32 w3-container about-header';
     const styledTeam = 'w3-padding-64 w3-container';
     const styledContact = 'w3-padding-64 w3-container about-contact';
 

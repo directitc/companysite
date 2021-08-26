@@ -14,28 +14,29 @@ const Slider = () => {
     const name = 'Learn More';
 
     return (
-        <div className="slider1-section">
-            <RadialBackground />
-            <Navigation>
-                <Logo />
-                <NavBar />
-            </Navigation>
-            <div className="w3-container slider1-header">
-                <div className="slider1-subsection">
-                    <Title classStyle={'title'} title={title} />
-                    <Subtitle
-                        classStyle={'subtitle'}
-                        subtitle={subtitle}
-                    ></Subtitle>
-                    <div className="slider1-button-wrapper w3-padding-16">
-                        <Button
-                            classStyle={'button-center w3-button w3-large'}
-                            name={name}
-                            type={'button'}
-                        />
+        <div className="about-header">
+            <RadialBackground classStyle={'w3-padding-bottom-32 w3-container radial-background'}>
+                <Navigation>
+                    <Logo />
+                    <NavBar />
+                </Navigation>
+                <div className="w3-padding-bottom-32 header-section">
+                    <div className="header-subsection">
+                        <Title classStyle={'title'} title={title} />
+                        <Subtitle
+                            classStyle={'subtitle'}
+                            subtitle={subtitle}
+                        ></Subtitle>
+                        <div className="slider1-button-wrapper w3-padding-16">
+                            <Button
+                                classStyle={'button-center w3-button w3-large'}
+                                name={name}
+                                type={'button'}
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </RadialBackground>
         </div>
     );
 };

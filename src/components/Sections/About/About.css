@@ -1,11 +1,19 @@
 .about-section {
     /* border: 3px solid plum; */
     width: 100%;
+    display: flex;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about-text {
     /* border: 3px solid blue; */
     color: rgba(0, 0, 0, 0.6);
+    display: flex;
     letter-spacing: 0;
     font-family: 'Roboto';
     font-size: 18px;
@@ -30,5 +38,8 @@
     }
     .about-button-wrapper {
         justify-content: center;
+    }
+    .about-section {
+        flex-wrap: wrap;
     }
 }
