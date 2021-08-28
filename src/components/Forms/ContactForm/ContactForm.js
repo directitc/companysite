@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../../Button/Button';
 import './ContactForm.css';
 
-const ContactForm = () => {
+const ContactForm = ({classStyle}) => {
     const [status, setStatus] = useState('Submit');
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,16 +27,16 @@ const ContactForm = () => {
     };
 
     return (
-        <form className="contact-form w3-padding-small" onSubmit={handleSubmit}>
-            <div className="contact-form-input w3-padding-small">
+        <form className={classStyle} onSubmit={handleSubmit}>
+            <div className="contact-form-input">
                 <label htmlFor="name" />
                 <input type="text" id="name" placeholder="Name" required />
             </div>
-            <div className="contact-form-input w3-padding-small">
+            <div className="contact-form-input">
                 <label htmlFor="email" />
                 <input type="text" id="email" placeholder="Email" required />
             </div>
-            <div className="contact-form-input w3-padding-small">
+            <div className="contact-form-input">
                 <label htmlFor="message" />
                 <textarea
                     type="text"

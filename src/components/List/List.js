@@ -1,7 +1,7 @@
 import React from 'react'
 import './List.css';
 
-const List = ({list}) => {
+const List = ({classStyle, list}) => {
     let displayList = [];
 
     for (let i = 0; i < list.length; i++) {
@@ -9,7 +9,7 @@ const List = ({list}) => {
         displayList.push(<li>{list[i]}</li>);
     }
     return (
-        <ul className="list-unordered">
+        <ul className={classStyle}>
             {displayList}
         </ul>
     )

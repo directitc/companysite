@@ -1,0 +1,31 @@
+.contact-header {
+    background-color: #252b42;
+}
+
+.contact-message {
+    background-color: white;
+}
+
+.contact-footer {
+    background-color: #252b42;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-footer h1 {
+    color: white;
+}
+
+.contact-footer span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-footer a {
+    color: white;
+}
+
+.contact-footer button {
+    background-color: #333333;
+    color: white;
+}

@@ -2,24 +2,24 @@
     background-color: #252b42;
 }
 
-.services-contact {
+.services-footer {
     background-color: #dddddd;
     color: black;
 }
 
-.services-contact h1 {
+.services-footer h1 {
     color: black;
 }
 
-.services-contact span {
+.services-footer span {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.services-contact a {
+.services-footer a {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.services-contact button {
+.services-footer button {
     background-color: #333333;
     color: white;
 }

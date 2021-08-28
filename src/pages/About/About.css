@@ -2,23 +2,23 @@
     background-color: #252B42;
 }
 
-.about-contact {
+.about-footer {
     background-color: #252B42;
     color: white;
 }
 
-.about-contact h1 {
+.about-footer h1 {
     color: white;
 }
 
-.about-contact span {
-    color: white;
+.about-footer span {
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.about-contact a {
-    color: white;
+.about-footer a {
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.about-contact button {
+.about-footer button {
     background-color: rgba(190, 183, 124, 1);
 }

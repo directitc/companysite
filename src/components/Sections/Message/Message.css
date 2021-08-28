@@ -1,0 +1,132 @@
+.message-section {
+    /* border: 3px solid green; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-form {
+    /* border: 3px solid salmon; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-subsection {
+    /* border: 3px solid paleturquoise; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.message-logo-contact {
+    /* border: 3px solid blue; */
+    width: 50%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.message-logo {
+    /* border: 3px solid purple; */
+    width: 62%;
+}
+
+.message-contact {
+    /* border: 3px solid purple; */
+    margin-left: 6%;
+}
+
+.message-questions {
+    /* border: 3px solid pink; */
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.message-text {
+    /* border: 3px solid pink; */
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto';
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.message-subtitle {
+    /* border: 3px solid palegreen; */
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    text-align: left;
+    width: 60%;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.message-contact-form {
+    /* border: 3px solid plum; */
+    width: 60%;
+}
+
+.message-contact-form input {
+    /* border: 3px solid palegreen; */
+    background-color: lightgray;
+    height: 50px;
+    width: 75%;
+}
+
+.message-contact-form textarea {
+    background-color: lightgray;
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    .message-contact {
+        flex-direction: column;
+    }
+    .message-contact-form {
+        width: 75%;
+    }
+    .message-contact-form input {
+        width: 100%;
+    }
+    .message-subtitle {
+        text-align: center;
+        font-size: 15px;
+        width: 75%;
+    }
+    .message-logo-contact {
+        /* border: 3px solid blue; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 16px !important;
+    }
+    .message-text {
+        /* border: 3px solid blueviolet; */
+        font-size: 22px;
+        padding: 0px !important;
+    }
+    .message-questions {
+        padding: 0px !important;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 550px) {
+    .message-contact-form {
+        width: 90%;
+    }
+    .message-subtitle {
+        width: 90%;
+    }
+    .message-text {
+        font-size: 20px;
+    }
+}

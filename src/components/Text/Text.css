@@ -1,3 +1,7 @@
 .text {
     display: inline-block;
 }
+
+.text-spacing {
+    padding-right: 7px;
+}

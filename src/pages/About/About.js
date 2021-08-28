@@ -1,9 +1,8 @@
 import React from 'react';
 import Header from '../../components/Sections/Header/Header';
 import Team from '../../components/Sections/Team/Team';
-import Contact from '../../components/Sections/Contact/Contact';
-import Copyright from '../../components/Sections/Copyright/Copyright';
-import ContactLogo from '../../assets/images/full-logo-white.png';
+import Footer from '../../components/Sections/Footer/Footer';
+import FooterLogo from '../../assets/images/full-logo-white.png';
 import './About.css';
 
 const About = () => {
@@ -11,7 +10,7 @@ const About = () => {
     const subtitle = 'Meet the team';
     const styledHeader = 'w3-padding-bottom-32 w3-container about-header';
     const styledTeam = 'w3-padding-64 w3-container';
-    const styledContact = 'w3-padding-64 w3-container about-contact';
+    const styledFooter = 'w3-padding-64 w3-container about-footer';
 
     return (
         <div className="about">
@@ -21,8 +20,7 @@ const About = () => {
                 subtitle={subtitle}
             />
             <Team classStyle={styledTeam} />
-            <Contact classStyle={styledContact} image={ContactLogo} />
-            <Copyright />
+            <Footer classStyle={styledFooter} image={FooterLogo} />
         </div>
     );
 };
