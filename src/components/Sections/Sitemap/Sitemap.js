@@ -1,7 +1,9 @@
 import React from 'react';
-import Title from '../../Title/Title';
-import Subtitle from '../../Subtitle/Subtitle';
+import Title from '../../UI/Title/Title';
+import Subtitle from '../../UI/Subtitle/Subtitle';
 import List from '../../List/List';
+import ScrollToTop from '../../../containers/ScrollToTop/ScrollToTop';
+import { NavLink } from 'react-router-dom';
 import './Sitemap.css';
 
 const Sitemap = ({ classStyle }) => {
@@ -12,7 +14,7 @@ const Sitemap = ({ classStyle }) => {
     const styledTitle = 'title footer-color';
     const styledSubtitle = 'footer-subtitle';
     const styledDivList = 'footer-list-wrapper sitemap-divlist';
-    const styledList = 'list-unordered sitemap-list';
+    const styledList = 'sitemap-list list-unordered';
     const sitemapList = ['Home', 'About', 'Services', 'Contact Us'];
 
     return (
@@ -26,7 +28,14 @@ const Sitemap = ({ classStyle }) => {
                     />
                 </div>
                 <div className={styledDivList}>
-                    <List classStyle={styledList} list={sitemapList} />
+                    <div className={styledList}>
+                        <ScrollToTop>
+                            <NavLink to="/" exact>Home</NavLink>
+                            <NavLink to="/about">About</NavLink>
+                            <NavLink to="/services">Services</NavLink>
+                            <NavLink to="/contact">Contact</NavLink>
+                        </ScrollToTop>
+                    </div>
                 </div>
             </div>
         </div>

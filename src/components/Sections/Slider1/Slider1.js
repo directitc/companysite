@@ -1,11 +1,12 @@
-import React from 'react';
-import RadialBackground from '../../RadialBackground/RadialBackground';
+import React, { useState } from 'react';
+import RadialBackground from '../../UI/RadialBackground/RadialBackground';
 import Navigation from '../../Navigation/Navigation';
 import Logo from '../../Logo/Logo';
-import NavBar from '../../NavBar/NavBar';
-import Title from '../../Title/Title';
-import Subtitle from '../../Subtitle/Subtitle';
-import Button from '../../Button/Button';
+import NavBar from '../../Navigation/NavBar/NavBar';
+import SideDrawer from '../../Navigation/SideDrawer/SideDrawer';
+import Title from '../../UI/Title/Title';
+import Subtitle from '../../UI/Subtitle/Subtitle';
+import Button from '../../UI/Button/Button';
 import './Slider1.css';
 
 const Slider = () => {
@@ -13,12 +14,36 @@ const Slider = () => {
     const subtitle = 'transfer and consolidate';
     const name = 'Learn More';
 
+    const [state, setState] = useState({
+        showSideDrawer: false,
+    });
+
+    const sideDrawerClosedHandler = () => {
+        setState({ showSideDrawer: false });
+    };
+
+    const sideDrawerToggleHandler = () => {
+        setState((prevState) => {
+            return {
+                showSideDrawer: !prevState.showSideDrawer,
+            };
+        });
+    };
+
     return (
         <div className="about-header">
-            <RadialBackground classStyle={'w3-padding-bottom-32 w3-container radial-background'}>
+            <RadialBackground
+                classStyle={
+                    'w3-padding-bottom-32 w3-container radial-background'
+                }
+            >
                 <Navigation>
                     <Logo />
-                    <NavBar />
+                    <NavBar drawerToggleClicked={sideDrawerToggleHandler} />
+                    <SideDrawer
+                        open={state.showSideDrawer}
+                        closed={sideDrawerClosedHandler}
+                    />
                 </Navigation>
                 <div className="w3-padding-bottom-32 header-section">
                     <div className="header-subsection">

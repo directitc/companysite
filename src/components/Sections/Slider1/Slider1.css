@@ -1,11 +1,11 @@
-.slider1-header {
+.header-section {
     /* border: 3px solid limegreen; */
-    position: relative;
+    /* position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: flex-start;
-    width: 100%;
+    width: 100%; */
 }
 
 .slider1-subsection {
@@ -26,14 +26,15 @@
 }
 
 @media (max-width: 768px) {
-    .slider1-header {
-        margin-top: 40px;
-        justify-content: center;
+    .header-section {
+        /* display: none; */
+        /* margin-top: 40px;
+        justify-content: center; */
     }
 }
 
-@media (max-width: 550px) {
-    .slider1-header {
-        display: none;
+@media (max-width: 600px) {
+    .header-section {
+        display: none !important;
     }
 }

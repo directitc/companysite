@@ -1,9 +1,9 @@
 import React from 'react';
-import Subtitle from '../../Subtitle/Subtitle';
-import Text from '../../Text/Text';
-import Link from '../../Link/Link';
-import Icon from '../../Icon/Icon';
-import Image from '../../Image/Image';
+import Subtitle from '../../UI/Subtitle/Subtitle';
+import Text from '../../UI/Text/Text';
+import Link from '../../UI/Link/Link';
+import Icon from '../../UI/Icon/Icon';
+import Image from '../../UI/Image/Image';
 import ContactForm from '../../Forms/ContactForm/ContactForm';
 import { FaPhone, FaRegEnvelope } from 'react-icons/fa';
 import './Message.css';

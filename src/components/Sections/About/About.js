@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../../Button/Button';
-import Title from '../../Title/Title';
-import Text from '../../Text/Text';
-import Image from '../../Image/Image';
+import Button from '../../UI/Button/Button';
+import Title from '../../UI/Title/Title';
+import Text from '../../UI/Text/Text';
+import Image from '../../UI/Image/Image';
 import AboutUsImage from '../../../assets/images/about-us-image.png';
 import './About.css';
 
@@ -29,6 +29,7 @@ const AboutSection = () => {
                             classStyle={'w3-button w3-large'}
                             name={name}
                             type={'button'}
+                            link={'/about'}
                         />
                     </div>
                 </div>

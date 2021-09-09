@@ -44,6 +44,10 @@
     justify-content: center;
 }
 
+.footer-list-wrapper a:hover {
+    color: rgba(190, 183, 124, 1);
+}
+
 .footer-text-wrapper {
     font-size: 18px;
     line-height: 1.7em;

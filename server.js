@@ -1,21 +1,27 @@
 const express = require('express');
+const nodemailer = require('nodemailer');
 const router = express.Router();
 const cors = require('cors');
-const nodemailer = require('nodemailer');
+const port = process.env.PORT || 5000;
+const creds = require('./config');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/', router);
-app.listen(5000, () => console.log('Server Running'));
+app.listen(port, () => console.log(`Listening on port ${port}`));
+
+app.get('/express_backend', (req, res) => {
+    res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+});
 
 const contactEmail = nodemailer.createTransport({
     host: 'mail.privateemail.com',
-    port: 587,
-    secure: false,
+    port: 993,
+    // secure: false,
     auth: {
-        user: 'admin@directitc.com',
-        pass: 'd52JIL*ATfaJT#!LspoDLtpMTytCmYtT',
+        user: creds.USER,
+        pass: creds.PASS,
     },
 });
 
@@ -27,7 +33,7 @@ contactEmail.verify((error) => {
     }
 });
 
-router.post('/contact', (req, res) => {
+router.post('/send', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
@@ -35,8 +41,8 @@ router.post('/contact', (req, res) => {
     console.log('email', email);
     console.log('message', message);
     const mail = {
-        from: email,
-        to: 'admin@directitc.com',
+        from: name,
+        to: 'colton.mcewen@directitc.com',
         subject: 'Contact Form Submission',
         html: `<p>Name: ${name}</p>
                 <p>Email: ${email}</p>

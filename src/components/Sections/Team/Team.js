@@ -1,9 +1,9 @@
 import React from 'react';
-import Title from '../../Title/Title';
-import Subtitle from '../../Subtitle/Subtitle';
-import Text from '../../Text/Text';
-import Link from '../../Link/Link';
-import Icon from '../../Icon/Icon';
+import Title from '../../UI/Title/Title';
+import Subtitle from '../../UI/Subtitle/Subtitle';
+import Text from '../../UI/Text/Text';
+import Link from '../../UI/Link/Link';
+import Icon from '../../UI/Icon/Icon';
 import { FaPhone, FaRegEnvelope } from 'react-icons/fa';
 import './Team.css';
 

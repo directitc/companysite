@@ -1,12 +1,12 @@
 import React from 'react';
-import Title from '../../Title/Title';
-import Image from '../../Image/Image';
-import Button from '../../Button/Button';
+import Title from '../../UI/Title/Title';
+import Image from '../../UI/Image/Image';
+import Button from '../../UI/Button/Button';
 import DataMigration from '../../../assets/images/services-data-migration.png';
 import DataAnalytics from '../../../assets/images/services-data-analytics.png';
 import SystemIntegration from '../../../assets/images/services-system-integration.png';
 import './Services.css';
-import Subtitle from '../../Subtitle/Subtitle';
+import Subtitle from '../../UI/Subtitle/Subtitle';
 
 const Services = () => {
     const title = 'Our Services';
@@ -39,6 +39,7 @@ const Services = () => {
                     classStyle={'w3-button w3-large'}
                     name={name}
                     type={'button'}
+                    link={'/services'}
                 />
             </div>
         </div>

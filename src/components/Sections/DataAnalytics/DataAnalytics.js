@@ -1,8 +1,8 @@
 import React from 'react';
-import Title from '../../Title/Title';
-import Icon from '../../Icon/Icon';
-import Text from '../../Text/Text';
-import Image from '../../Image/Image';
+import Title from '../../UI/Title/Title';
+import Icon from '../../UI/Icon/Icon';
+import Text from '../../UI/Text/Text';
+import Image from '../../UI/Image/Image';
 import DataAnalyticsImage from '../../../assets/images/services-data-analytics.png';
 import { FaDotCircle } from 'react-icons/fa';
 import './DataAnalytics.css';

@@ -1225,8 +1225,8 @@ a {
     float: right !important;
 }
 .w3-button:hover {
-    color: #000 !important;
-    background-color: #ccc !important;
+    color: white !important;
+    background-color: rgb(209, 200, 117) !important;
 }
 .w3-transparent,
 .w3-hover-none:hover {

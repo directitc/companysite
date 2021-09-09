@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../../Button/Button';
+import Button from '../../UI/Button/Button';
 import './ContactForm.css';
 
 const ContactForm = ({classStyle}) => {
@@ -14,7 +14,7 @@ const ContactForm = ({classStyle}) => {
             email: email.value,
             message: message.value,
         };
-        let response = await fetch('http://localhost:5000/contact', {
+        let response = await fetch('/express_backend', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8',

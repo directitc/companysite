@@ -1,13 +1,15 @@
 import React, { Fragment } from 'react';
-import Title from '../../Title/Title';
-import Subtitle from '../../Subtitle/Subtitle';
-import Text from '../../Text/Text';
+import Title from '../../UI/Title/Title';
+import Subtitle from '../../UI/Subtitle/Subtitle';
+import Text from '../../UI/Text/Text';
 import List from '../../List/List';
-import Link from '../../Link/Link';
-import Icon from '../../Icon/Icon';
-import Image from '../../Image/Image';
+import Link from '../../UI/Link/Link';
+import Icon from '../../UI/Icon/Icon';
+import Image from '../../UI/Image/Image';
 import ContactForm from '../../Forms/ContactForm/ContactForm';
 import Copyright from '../Copyright/Copyright';
+import ScrollToTop from '../../../containers/ScrollToTop/ScrollToTop';
+import { NavLink } from 'react-router-dom';
 import { FaPhone, FaRegEnvelope } from 'react-icons/fa';
 import './Footer.css';
 
@@ -21,7 +23,7 @@ const Footer = ({ classStyle, image }) => {
     const styledTitle = 'title footer-color';
     const styledSubtitle = 'footer-subtitle';
     const styledDivList = 'footer-list-wrapper';
-    const styledList = 'list-unordered';
+    const styledList = 'navlink';
     const sitemapList = ['Home', 'About', 'Services', 'Contact Us'];
 
     return (
@@ -41,9 +43,22 @@ const Footer = ({ classStyle, image }) => {
                         classStyle={styledSubtitle}
                         subtitle={subtitle2}
                     />
-                    <div className={styledDivList}>
-                        <List classStyle={styledList} list={sitemapList} />
-                    </div>
+                    <ul className={styledDivList}>
+                        <ScrollToTop>
+                            <NavLink className={styledList} to="/" exact>
+                                Home
+                            </NavLink>
+                            <NavLink className={styledList} to="/about">
+                                About
+                            </NavLink>
+                            <NavLink className={styledList} to="/services">
+                                Services
+                            </NavLink>
+                            <NavLink className={styledList} to="/contact">
+                                Contact
+                            </NavLink>
+                        </ScrollToTop>
+                    </ul>
                 </div>
                 <div className={styledDiv}>
                     <div>
