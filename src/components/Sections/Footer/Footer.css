@@ -35,7 +35,7 @@
     padding-bottom: 10px;
 }
 
-.footer-list-wrapper {
+.footer-list-wrapper ul {
     /* border: 3px solid blue; */
     text-align: center;
     list-style-position: inside;

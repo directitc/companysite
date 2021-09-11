@@ -1,54 +1,65 @@
-import React, { useState } from 'react';
+import React from 'react';
+import emailjs from 'emailjs-com';
 import Button from '../../UI/Button/Button';
+import creds from '../../../config';
 import './ContactForm.css';
 
-const ContactForm = ({classStyle}) => {
-    const [status, setStatus] = useState('Submit');
+const ContactForm = ({ classStyle }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus('Sending...');
 
-        const { name, email, message } = e.target.elements;
-        let details = {
-            name: name.value,
-            email: email.value,
-            message: message.value,
-        };
-        let response = await fetch('/express_backend', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8',
-            },
-            body: JSON.stringify(details),
-        });
-        setStatus('Submit');
-        let result = await response.json();
-        alert(result.status);
+        emailjs
+            .sendForm(
+                creds.SERVICE_ID,
+                creds.TEMPLATE_ID,
+                e.target,
+                creds.USER_ID
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    alert('Message Sent');
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+        e.target.reset();
     };
 
     return (
         <form className={classStyle} onSubmit={handleSubmit}>
             <div className="contact-form-input">
-                <label htmlFor="name" />
-                <input type="text" id="name" placeholder="Name" required />
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    name="name"
+                    required
+                />
             </div>
             <div className="contact-form-input">
-                <label htmlFor="email" />
-                <input type="text" id="email" placeholder="Email" required />
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    name="email"
+                    required
+                />
             </div>
             <div className="contact-form-input">
-                <label htmlFor="message" />
                 <textarea
                     type="text"
                     id="message"
                     placeholder="Type message here..."
+                    name="message"
                     required
                 />
             </div>
             <div className="button-fstart w3-padding-small w3-padding-32">
                 <Button
                     classStyle={'w3-button w3-large contact-button-background'}
-                    name={status}
+                    name={'Submit'}
                     type={'submit'}
                 />
             </div>

@@ -1,5 +1,5 @@
 import Slider1 from '../../components/Sections/Slider1/Slider1';
-import Slider from '../../components/UI/Slider/Slider';
+// import Slider from '../../components/UI/Slider/Slider';
 import Services from '../../components/Sections/Services/Services';
 import About from '../../components/Sections/About/About';
 import Footer from '../../components/Sections/Footer/Footer';

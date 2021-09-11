@@ -7,7 +7,6 @@ import './SideDrawer.css';
 const SideDrawer = (props) => {
     let attachedClasses = ['side-drawer', 'side-drawer-close'];
     if (props.open) {
-        console.log('open');
         attachedClasses = ['side-drawer', 'side-drawer-open'];
     }
 

@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import Title from '../../UI/Title/Title';
 import Subtitle from '../../UI/Subtitle/Subtitle';
 import Text from '../../UI/Text/Text';
-import List from '../../List/List';
 import Link from '../../UI/Link/Link';
 import Icon from '../../UI/Icon/Icon';
 import Image from '../../UI/Image/Image';
@@ -24,7 +23,6 @@ const Footer = ({ classStyle, image }) => {
     const styledSubtitle = 'footer-subtitle';
     const styledDivList = 'footer-list-wrapper';
     const styledList = 'navlink';
-    const sitemapList = ['Home', 'About', 'Services', 'Contact Us'];
 
     return (
         <Fragment>
