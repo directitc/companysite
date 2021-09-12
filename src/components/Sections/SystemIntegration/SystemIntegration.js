@@ -17,18 +17,18 @@ const bulletedList = [
 ];
 
 const SystemIntegration = () => {
-    const title = 'System Integration';
+    const systemIntegrationTitle = 'System Integration';
     let bullets = [];
 
     for (let i = 0; i < bulletedList.length; i++) {
         bullets.push(
             <div className="system-integration-list">
                 <Icon
-                    classStyle={'system-integration-icon'}
+                    classStyle="system-integration-icon"
                     icon={<FaDotCircle />}
                 />
                 <Text
-                    classStyle={'system-integration-text'}
+                    classStyle="system-integration-text"
                     text={bulletedList[i]}
                 />
             </div>
@@ -40,14 +40,14 @@ const SystemIntegration = () => {
             <div className="w3-content system-integration-section">
                 <div className="w3-third w3-center w3-padding-small w3-padding-32">
                     <Image
-                        classStyle={'system-integration-image'}
+                        classStyle="system-integration-image"
                         src={SystemIntegrationImage}
                     />
                 </div>
                 <div className="w3-twothird w3-padding-large w3-padding-32">
                     <Title
-                        classStyle={'title title-fstart title-dark-gray'}
-                        title={title}
+                        classStyle="title title-fstart title-dark-gray"
+                        title={systemIntegrationTitle}
                     />
                     {bullets}
                 </div>

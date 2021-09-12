@@ -33,38 +33,40 @@ const teamList = [
 ];
 
 const Team = ({ classStyle }) => {
-    const styledSubtitle = 'team-subtitle';
     let teamMembers = [];
 
     for (let i = 0; i < teamList.length; i++) {
         teamMembers.push(
-            <div key={i} className="w3-padding-large w3-padding-32 team-section">
+            <div
+                key={i}
+                className="w3-padding-large w3-padding-32 team-section"
+            >
                 <Title
-                    classStyle={'title title-dark-gray team-title'}
+                    classStyle="title title-dark-gray team-title"
                     title={teamList[i].name}
                 />
                 <Subtitle
-                    classStyle={styledSubtitle}
+                    classStyle="team-subtitle"
                     subtitle={teamList[i].title}
                 />
                 {teamList[i].description !== '' ? (
                     <Text
-                        classStyle={'team-text'}
+                        classStyle="team-text"
                         text={teamList[i].description}
                     />
                 ) : null}
-                <div className='team-contact'>
-                    <Icon classStyle={'icon'} icon={<FaPhone />} />
+                <div className="team-contact">
+                    <Icon classStyle="icon" icon={<FaPhone />} />
                     <Link
-                        classStyle={'link team-text'}
+                        classStyle="link team-text"
                         href={'tel:' + teamList[i].phone}
                         link={teamList[i].phone}
                     />
                 </div>
                 <div>
-                    <Icon classStyle={'icon'} icon={<FaRegEnvelope />} />
+                    <Icon classStyle="icon" icon={<FaRegEnvelope />} />
                     <Link
-                        classStyle={'link team-text'}
+                        classStyle="link team-text"
                         href={'mailto:' + teamList[i].email}
                         link={teamList[i].email}
                     />

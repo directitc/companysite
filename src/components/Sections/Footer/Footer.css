@@ -35,7 +35,7 @@
     padding-bottom: 10px;
 }
 
-.footer-list-wrapper ul {
+.footer-list-wrapper {
     /* border: 3px solid blue; */
     text-align: center;
     list-style-position: inside;
@@ -55,6 +55,18 @@
 
 .footer-button-background {
     background-color: #333333;
+}
+
+.navlink {
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.navlink:hover {
+    color: gray;
 }
 
 @media (max-width: 768px) {

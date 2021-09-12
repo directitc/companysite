@@ -4,7 +4,7 @@ import LogoImgCircle from '../../assets/images/circle-logo-color.png';
 import LogoImgText from '../../assets/images/text-logo-color.png';
 import './Logo.css';
 
-const Logo = (props) => {
+const Logo = () => {
     return (
         <Fragment>
             <img className="logo" alt="" src={LogoImg} />;

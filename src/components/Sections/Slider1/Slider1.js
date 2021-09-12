@@ -10,9 +10,9 @@ import Button from '../../UI/Button/Button';
 import './Slider1.css';
 
 const Slider = () => {
-    const title = 'Data Migration';
-    const subtitle = 'transfer and consolidate';
-    const name = 'Learn More';
+    const dataMigrationTitle = 'Data Migration';
+    const dataMigrationSubtitle = 'transfer and consolidate';
+    const dataMigrationButton = 'Learn More';
 
     const [state, setState] = useState({
         showSideDrawer: false,
@@ -32,11 +32,7 @@ const Slider = () => {
 
     return (
         <div className="about-header">
-            <RadialBackground
-                classStyle={
-                    'w3-padding-bottom-32 w3-container radial-background'
-                }
-            >
+            <RadialBackground classStyle="w3-padding-bottom-32 w3-container radial-background">
                 <Navigation>
                     <Logo />
                     <NavBar drawerToggleClicked={sideDrawerToggleHandler} />
@@ -47,16 +43,16 @@ const Slider = () => {
                 </Navigation>
                 <div className="w3-padding-bottom-32 header-section">
                     <div className="header-subsection">
-                        <Title classStyle={'title'} title={title} />
+                        <Title classStyle="title" title={dataMigrationTitle} />
                         <Subtitle
-                            classStyle={'subtitle'}
-                            subtitle={subtitle}
+                            classStyle="subtitle"
+                            subtitle={dataMigrationSubtitle}
                         ></Subtitle>
                         <div className="slider1-button-wrapper w3-padding-16">
                             <Button
-                                classStyle={'button-center w3-button w3-large'}
-                                name={name}
-                                type={'button'}
+                                classStyle="button-center w3-button w3-large"
+                                name={dataMigrationButton}
+                                type="button"
                             />
                         </div>
                     </div>

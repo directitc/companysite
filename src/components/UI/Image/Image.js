@@ -2,11 +2,7 @@ import React from 'react';
 import './Image.css';
 
 const Image = ({ classStyle, src }) => {
-    return (
-        // <div className={classStyle}>
-            <img className={classStyle} src={src} alt="" />
-        // </div>
-    );
+    return <img className={classStyle} src={src} alt="" />;
 };
 
 export default Image;

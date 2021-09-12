@@ -13,91 +13,84 @@ import { FaPhone, FaRegEnvelope } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = ({ classStyle, image }) => {
-    const contactUs = 'Contact Us';
-    const sitemap = 'Sitemap';
-    const subtitle1 = 'Send us a message';
-    const subtitle2 = 'All our pages';
-    const subtitle3 = 'Already with us?';
-    const styledDiv = 'w3-third w3-center w3-padding-16 footer-div';
-    const styledTitle = 'title footer-color';
-    const styledSubtitle = 'footer-subtitle';
-    const styledDivList = 'footer-list-wrapper';
-    const styledList = 'navlink';
+    const contactTitle = 'Contact Us';
+    const contactSubtitle = 'Send us a message';
+    const contactSubtitle2 = 'Send your questions here:';
+    const sitmapTitle = 'Sitemap';
+    const sitemapSubtitle = 'All our pages';
+    const questionSubtitle = 'Already with us?';
 
     return (
         <Fragment>
             <div className={classStyle}>
-                <div className={styledDiv}>
-                    <Title classStyle={styledTitle} title={contactUs} />
+                <div className="w3-third w3-center w3-padding-16 footer-div">
+                    <Title
+                        classStyle="title footer-color"
+                        title={contactTitle}
+                    />
                     <Subtitle
-                        classStyle={styledSubtitle}
-                        subtitle={subtitle1}
+                        classStyle="footer-subtitle"
+                        subtitle={contactSubtitle}
                     />
                     <ContactForm classStyle="contact-form w3-padding-small footer-message" />
                 </div>
-                <div className={styledDiv}>
-                    <Title classStyle={styledTitle} title={sitemap} />
-                    <Subtitle
-                        classStyle={styledSubtitle}
-                        subtitle={subtitle2}
+                <div className="w3-third w3-center w3-padding-16 footer-div">
+                    <Title
+                        classStyle="title footer-color"
+                        title={sitmapTitle}
                     />
-                    <ul className={styledDivList}>
+                    <Subtitle
+                        classStyle="footer-subtitle"
+                        subtitle={sitemapSubtitle}
+                    />
+                    <ul className="footer-list-wrapper">
                         <ScrollToTop>
-                            <NavLink className={styledList} to="/" exact>
+                            <NavLink className="navlink" to="/" exact>
                                 Home
                             </NavLink>
-                            <NavLink className={styledList} to="/about">
+                            <NavLink className="navlink" to="/about">
                                 About
                             </NavLink>
-                            <NavLink className={styledList} to="/services">
+                            <NavLink className="navlink" to="/services">
                                 Services
                             </NavLink>
-                            <NavLink className={styledList} to="/contact">
+                            <NavLink className="navlink" to="/contact">
                                 Contact
                             </NavLink>
                         </ScrollToTop>
                     </ul>
                 </div>
-                <div className={styledDiv}>
+                <div className="w3-third w3-center w3-padding-16 footer-div">
                     <div>
-                        <Image classStyle={'footer-data-image'} src={image} />
+                        <Image classStyle="footer-data-image" src={image} />
                     </div>
-                    <div className={'footer-text-wrapper'}>
+                    <div className="footer-text-wrapper">
                         <div>
-                            <Icon classStyle={'icon'} icon={<FaPhone />} />
+                            <Icon classStyle="icon" icon={<FaPhone />} />
                             <Link
-                                classStyle={'link'}
-                                href={'tel:801-660-7780'}
-                                link={'(801) 660-7780'}
+                                classStyle="link"
+                                href="tel:801-660-7780"
+                                link="(801) 660-7780"
                             />
                         </div>
                         <div>
-                            <Icon
-                                classStyle={'icon'}
-                                icon={<FaRegEnvelope />}
-                            />
+                            <Icon classStyle="icon" icon={<FaRegEnvelope />} />
                             <Link
-                                classStyle={'link'}
-                                href={'mailto:admin@directitc.com'}
-                                link={'admin@directitc.com'}
+                                classStyle="link"
+                                href="mailto:admin@directitc.com"
+                                link="admin@directitc.com"
                             />
                         </div>
                     </div>
-                    <div className={'footer-text-wrapper w3-padding-top-32'}>
-                        <Text classStyle={'text'} text={subtitle3} />
-                        <Text
-                            classStyle={'text'}
-                            text={'Send your questions here:'}
-                        />
+                    <div className="footer-text-wrapper w3-padding-top-32">
+                        <Text classStyle="text" text={questionSubtitle} />
+                        <Text classStyle="text" text={contactSubtitle2} />
                         <div>
-                            <Icon
-                                classStyle={'icon'}
-                                icon={<FaRegEnvelope />}
-                            />
+                            <Icon classStyle="icon" icon={<FaRegEnvelope />} />
                             <Link
-                                classStyle={'link'}
-                                href={'mailto:support@directitc.com'}
-                                link={'support@directitc.com'}
+                                classStyle="link"
+                                href="mailto:support@directitc.com"
+                                link="support@directitc.com"
                             />
                         </div>
                     </div>

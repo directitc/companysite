@@ -16,20 +16,14 @@ const bulletedList = [
 ];
 
 const DataMigration = () => {
-    const title = 'Data Migration';
+    const dataMigrationTitle = 'Data Migration';
     let bullets = [];
 
     for (let i = 0; i < bulletedList.length; i++) {
         bullets.push(
             <div className="data-migration-list">
-                <Icon
-                    classStyle={'data-migration-icon'}
-                    icon={<FaDotCircle />}
-                />
-                <Text
-                    classStyle={'data-migration-text'}
-                    text={bulletedList[i]}
-                />
+                <Icon classStyle="data-migration-icon" icon={<FaDotCircle />} />
+                <Text classStyle="data-migration-text" text={bulletedList[i]} />
             </div>
         );
     }
@@ -38,12 +32,15 @@ const DataMigration = () => {
         <div className="w3-padding-64 w3-container data-migration">
             <div className="w3-content data-migration-section">
                 <div className="w3-third w3-center w3-padding-small w3-padding-32">
-                    <Image classStyle={'data-migration-image'} src={DataMigrationImage} />
+                    <Image
+                        classStyle="data-migration-image"
+                        src={DataMigrationImage}
+                    />
                 </div>
                 <div className="w3-twothird w3-padding-large w3-padding-32">
                     <Title
-                        classStyle={'title title-fstart title-dark-gray'}
-                        title={title}
+                        classStyle="title title-fstart title-dark-gray"
+                        title={dataMigrationTitle}
                     />
                     {bullets}
                 </div>

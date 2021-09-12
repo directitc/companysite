@@ -6,21 +6,21 @@ import FooterLogo from '../../assets/images/full-logo-white.png';
 import './About.css';
 
 const About = () => {
-    const title = 'About Us';
-    const subtitle = 'Meet the team';
-    const styledHeader = 'w3-padding-bottom-32 w3-container about-header';
-    const styledTeam = 'w3-padding-64 w3-container';
-    const styledFooter = 'w3-padding-64 w3-container about-footer';
+    const aboutTitle = 'About Us';
+    const aboutSubtitle = 'Meet the team';
 
     return (
         <div className="about">
             <Header
-                classStyle={styledHeader}
-                title={title}
-                subtitle={subtitle}
+                classStyle="w3-padding-bottom-32 w3-container about-header"
+                title={aboutTitle}
+                subtitle={aboutSubtitle}
             />
-            <Team classStyle={styledTeam} />
-            <Footer classStyle={styledFooter} image={FooterLogo} />
+            <Team classStyle="w3-padding-64 w3-container" />
+            <Footer
+                classStyle="w3-padding-64 w3-container about-footer"
+                image={FooterLogo}
+            />
         </div>
     );
 };

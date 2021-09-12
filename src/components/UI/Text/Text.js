@@ -2,11 +2,7 @@ import React from 'react';
 import './Text.css';
 
 const Text = ({ classStyle, text }) => {
-    return (
-        // <div>
-            <span className={classStyle}>{text}</span>
-        // </div>
-    );
+    return <span className={classStyle}>{text}</span>;
 };
 
 export default Text;

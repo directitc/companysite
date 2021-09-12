@@ -36,9 +36,9 @@ const Header = ({ classStyle, title, subtitle }) => {
             </Navigation>
             <div className="w3-padding-top-16 w3-padding-bottom-64 header-section">
                 <div className="header-subsection">
-                    <Title classStyle={'title title-fstart'} title={title} />
+                    <Title classStyle="title title-fstart" title={title} />
                     <Subtitle
-                        classStyle={'subtitle subtitle-fstart'}
+                        classStyle="subtitle subtitle-fstart"
                         subtitle={subtitle}
                     ></Subtitle>
                 </div>

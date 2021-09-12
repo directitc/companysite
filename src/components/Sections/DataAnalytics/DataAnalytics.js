@@ -17,20 +17,14 @@ const bulletedList = [
 ];
 
 const DataAnalytics = () => {
-    const title = 'Data Analytics';
+    const dataAnalyticsTitle = 'Data Analytics';
     let bullets = [];
 
     for (let i = 0; i < bulletedList.length; i++) {
         bullets.push(
             <div className="data-analytics-list">
-                <Icon
-                    classStyle={'data-analytics-icon'}
-                    icon={<FaDotCircle />}
-                />
-                <Text
-                    classStyle={'data-analytics-text'}
-                    text={bulletedList[i]}
-                />
+                <Icon classStyle="data-analytics-icon" icon={<FaDotCircle />} />
+                <Text classStyle="data-analytics-text" text={bulletedList[i]} />
             </div>
         );
     }
@@ -40,14 +34,14 @@ const DataAnalytics = () => {
             <div className="w3-content data-analytics-section">
                 <div className="w3-third w3-center w3-padding-small w3-padding-32">
                     <Image
-                        classStyle={'data-analytics-image'}
+                        classStyle="data-analytics-image"
                         src={DataAnalyticsImage}
                     />
                 </div>
                 <div className="w3-twothird w3-padding-large w3-padding-32">
                     <Title
-                        classStyle={'title title-fstart title-dark-gray'}
-                        title={title}
+                        classStyle="title title-fstart title-dark-gray"
+                        title={dataAnalyticsTitle}
                     />
                     {bullets}
                 </div>
