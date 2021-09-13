@@ -7,7 +7,7 @@ import './Logo.css';
 const Logo = () => {
     return (
         <Fragment>
-            <img className="logo" alt="" src={LogoImg} />;
+            <img className="logo" alt="" src={LogoImg} />
             <div className="logo-div">
                 <img className="logo-circle" alt="" src={LogoImgCircle} />
                 <img className="logo-text" alt="" src={LogoImgText} />
