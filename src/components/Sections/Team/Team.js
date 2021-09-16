@@ -37,10 +37,7 @@ const Team = ({ classStyle }) => {
 
     for (let i = 0; i < teamList.length; i++) {
         teamMembers.push(
-            <div
-                key={i}
-                className="w3-padding-large w3-padding-32 team-section"
-            >
+            <div key={i} className="w3-padding-small w3-padding-32">
                 <Title
                     classStyle="title title-dark-gray team-title"
                     title={teamList[i].name}
@@ -77,7 +74,7 @@ const Team = ({ classStyle }) => {
 
     return (
         <div className={classStyle}>
-            <div className="w3-content">{teamMembers}</div>
+            <div className="w3-content team-section">{teamMembers}</div>
         </div>
     );
 };

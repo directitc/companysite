@@ -1,14 +1,14 @@
 import React, { memo } from 'react';
 import { css } from '@emotion/css';
+import './Dots.css';
 
 const Dot = ({ active }) => (
     <span
         className={css`
-            padding: 10px;
+            padding: 8px;
             margin-right: 5px;
-            cursor: pointer;
             border-radius: 50%;
-            background: ${active ? 'black' : 'white'};
+            background: ${active ? 'gray' : 'lightgray'};
         `}
     />
 );
@@ -16,16 +16,7 @@ const Dot = ({ active }) => (
 const MemoDot = memo(Dot);
 
 const Dots = ({ slides, activeSlide }) => (
-    <div
-        className={css`
-            position: absolute;
-            bottom: 25px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        `}
-    >
+    <div className="dots">
         {slides.map((slide, i) => (
             <MemoDot key={slide} active={activeSlide === i} />
         ))}

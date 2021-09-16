@@ -1,10 +1,7 @@
 .radial-background {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-image: radial-gradient(
             47.46% 35.25% at 35.88% 67.94%,
             rgba(37, 43, 66, 0.288) 0%,

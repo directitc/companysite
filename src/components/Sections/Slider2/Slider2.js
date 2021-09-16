@@ -1,43 +1,43 @@
 import React from 'react';
-import RadialBackground from '../../UI/RadialBackground/RadialBackground';
+import LinearBackground from '../../UI/LinearBackground/LinearBackground';
 import Title from '../../UI/Title/Title';
 import Subtitle from '../../UI/Subtitle/Subtitle';
 import Button from '../../UI/Button/Button';
-import './Slider1.css';
+import './Slider2.css';
 
-const Slider = () => {
-    const dataMigrationTitle = 'Data Migration';
-    const dataMigrationSubtitle = 'transfer and consolidate';
-    const dataMigrationButton = 'Learn More';
+const Slider2 = () => {
+    const systemIntegrationTitle = 'System Integration';
+    const systemIntegrationSubtitle = 'experience a seamless transistion';
+    const systemIntegrationButton = 'Learn More';
 
     return (
         <div className="about-header">
-            <RadialBackground classStyle="w3-container radial-background">
+            <LinearBackground classStyle="w3-container linear-background">
                 <div className="w3-padding-bottom-64 header-section">
                     <div className="header-subsection fend">
                         <div className="header-text-slider fcenter">
                             <Title
                                 classStyle="title"
-                                title={dataMigrationTitle}
+                                title={systemIntegrationTitle}
                             />
                             <Subtitle
                                 classStyle="subtitle"
-                                subtitle={dataMigrationSubtitle}
+                                subtitle={systemIntegrationSubtitle}
                             ></Subtitle>
                             <div className="slider1-button-wrapper w3-padding-16">
                                 <Button
                                     classStyle="button-center w3-button w3-large"
-                                    name={dataMigrationButton}
+                                    name={systemIntegrationButton}
                                     type="button"
-                                    link="/services#data-migration"
+                                    link="/services#system-integration"
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
-            </RadialBackground>
+            </LinearBackground>
         </div>
     );
 };
 
-export default Slider;
+export default Slider2;

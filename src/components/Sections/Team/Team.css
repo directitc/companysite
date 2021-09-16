@@ -1,9 +1,12 @@
+.team-section {
+    padding: 0;
+}
+
 .team-title {
     justify-content: flex-start;
 }
 
 .team-subtitle {
-    /* border: 3px solid blue; */
     color: rgba(0, 0, 0, 0.6);
     position: relative;
     display: flex;
@@ -15,7 +18,6 @@
 }
 
 .team-text {
-    /* border: 3px solid blue; */
     color: rgba(0, 0, 0, 0.6);
     position: relative;
     letter-spacing: 0;

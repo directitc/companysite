@@ -29,7 +29,10 @@ const DataMigration = () => {
     }
 
     return (
-        <div className="w3-padding-64 w3-container data-migration">
+        <div
+            id="data-migration"
+            className="w3-padding-64 w3-container data-migration"
+        >
             <div className="w3-content data-migration-section">
                 <div className="w3-third w3-center w3-padding-small w3-padding-32">
                     <Image

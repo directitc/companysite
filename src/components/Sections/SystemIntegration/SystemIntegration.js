@@ -36,7 +36,10 @@ const SystemIntegration = () => {
     }
 
     return (
-        <div className="w3-padding-64 w3-container system-integration">
+        <div
+            id="system-integration"
+            className="w3-padding-64 w3-container system-integration"
+        >
             <div className="w3-content system-integration-section">
                 <div className="w3-third w3-center w3-padding-small w3-padding-32">
                     <Image

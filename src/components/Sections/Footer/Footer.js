@@ -32,7 +32,7 @@ const Footer = ({ classStyle, image }) => {
                         classStyle="footer-subtitle"
                         subtitle={contactSubtitle}
                     />
-                    <ContactForm classStyle="contact-form w3-padding-small footer-message" />
+                    <ContactForm classStyle="w3-padding-small footer-message" />
                 </div>
                 <div className="w3-third w3-center w3-padding-16 footer-div">
                     <Title

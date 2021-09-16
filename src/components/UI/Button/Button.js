@@ -1,17 +1,17 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Button.css';
 
 const Button = ({ classStyle, name, type, link }) => {
-    const history = useHistory();
-
     return (
-        <button
-            className={classStyle}
-            type={type}
-            onClick={() => history.push(link)}
-        >
-            {name}
+        <button className={classStyle} type={type}>
+            {type === 'submit' ? (
+                name
+            ) : (
+                <Link to={link} className="link-button">
+                    {name}
+                </Link>
+            )}
         </button>
     );
 };

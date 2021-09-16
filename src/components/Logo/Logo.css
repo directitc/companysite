@@ -1,27 +1,23 @@
+.logo {
+    width: 467px;
+    z-index: 12;
+}
+
 .logo-div {
-    width: 80%;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -40px;
-}
-
-.logo {
-    width: 467px;
-    margin: auto;
-    z-index: 12;
 }
 
 .logo-text {
-    /* border: 3px solid blue; */
     width: 100%;
     margin: auto;
     z-index: 12;
 }
 
 .logo-circle {
-    /* border: 3px solid limegreen; */
     width: 50%;
     margin: auto;
     z-index: 12;

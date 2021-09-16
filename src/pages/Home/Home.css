@@ -1,5 +1,13 @@
+.home-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .home-footer {
-    background-color: #DDDDDD;
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: row;
 }
 
 .home-footer h1 {
@@ -16,4 +24,10 @@
 
 .home-footer button {
     background-color: #333333;
+}
+
+@media (max-width: 600px) {
+    .home-footer {
+        flex-direction: column;
+    }
 }

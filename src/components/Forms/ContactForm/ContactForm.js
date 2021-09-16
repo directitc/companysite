@@ -58,9 +58,10 @@ const ContactForm = ({ classStyle }) => {
             </div>
             <div className="button-fstart w3-padding-small w3-padding-32">
                 <Button
-                    classStyle={'w3-button w3-large contact-button-background'}
-                    name={'Submit'}
-                    type={'submit'}
+                    classStyle="w3-button w3-large contact-button-background submit-button"
+                    name="Submit"
+                    type="submit"
+                    link=""
                 />
             </div>
         </form>

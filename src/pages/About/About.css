@@ -1,9 +1,34 @@
+.about {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0% 100%;
+}
+
+.about-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about-navigation,
+.about-content {
+    grid-area: 1/2;
+}
+
 .about-header {
-    background-color: #252B42;
+    width: 100%;
+    background-color: #252b42;
 }
 
 .about-footer {
-    background-color: #252B42;
+    background-color: #252b42;
     color: white;
 }
 
@@ -21,4 +46,14 @@
 
 .about-footer button {
     background-color: rgba(190, 183, 124, 1);
+}
+
+@media (max-width: 600px) {
+    .about-navigation {
+        padding-top: 32px;
+    }
+    .about-header {
+        height: 380px;
+        padding-bottom: 32px;
+    }
 }

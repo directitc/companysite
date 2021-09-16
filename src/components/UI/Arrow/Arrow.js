@@ -2,7 +2,6 @@ import React from 'react';
 import { css } from '@emotion/css';
 import { FaChevronRight } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
-import './Arrow.css';
 
 const Arrow = ({ direction, handleClick }) => {
     return (
@@ -11,12 +10,13 @@ const Arrow = ({ direction, handleClick }) => {
             className={css`
                 display: flex;
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 ${direction === 'right' ? `right: 25px` : `left: 25px`};
                 height: 50px;
                 width: 50px;
                 justify-content: center;
-                background: white;
+                font-size: 30px;
+                color: lightgray;
                 border-radius: 50%;
                 cursor: pointer;
                 align-items: center;
@@ -34,11 +34,7 @@ const Arrow = ({ direction, handleClick }) => {
                 }
             `}
         >
-            {direction === 'right' ? (
-                <FaChevronRight />
-            ) : (
-                <FaChevronLeft />
-            )}
+            {direction === 'right' ? <FaChevronRight /> : <FaChevronLeft />}
         </div>
     );
 };

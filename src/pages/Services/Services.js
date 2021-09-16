@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../../components/Navigation/Navigation';
 import Header from '../../components/Sections/Header/Header';
 import DataMigration from '../../components/Sections/DataMigration/DataMigration';
 import DataAnalytics from '../../components/Sections/DataAnalytics/DataAnalytics';
@@ -12,19 +13,24 @@ const Services = () => {
     const servicesSubtitle = 'Consult with IT experts';
 
     return (
-        <div className="services">
-            <Header
-                classStyle="w3-padding-bottom-32 w3-container services-header"
-                title={servicesTitle}
-                subtitle={servicesSubtitle}
-            />
-            <DataMigration />
-            <DataAnalytics />
-            <SystemIntegration />
-            <Footer
-                classStyle="w3-padding-64 w3-container services-footer"
-                image={FooterLogo}
-            />
+        <div className="about">
+            <div className="about-navigation">
+                <Navigation />
+            </div>
+            <div className="about-content">
+                <Header
+                    classStyle="w3-container about-header"
+                    title={servicesTitle}
+                    subtitle={servicesSubtitle}
+                />
+                <DataMigration />
+                <DataAnalytics />
+                <SystemIntegration />
+                <Footer
+                    classStyle="w3-padding-64 w3-container services-footer"
+                    image={FooterLogo}
+                />
+            </div>
         </div>
     );
 };

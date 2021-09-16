@@ -1,5 +1,4 @@
 .button-center {
-    /* border: 3px solid red; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -7,11 +6,17 @@
 }
 
 .button-fstart {
-    /* border: 3px solid red; */
     position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.button-fend {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .button {
@@ -29,28 +34,34 @@
     text-align: center;
 }
 
-/* 294 */
 .w3-button {
-    /* border: 3px solid red; */
     width: 200px;
     display: inline-block;
-    padding: 8px 16px;
     vertical-align: middle;
     overflow: hidden;
-    text-decoration: none;
-    color: white;
+    padding: 8px 16px;
     background-color: rgba(190, 183, 124, 1);
+    color: white;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
     font-family: 'Roboto';
     font-size: 24px;
     font-weight: 400;
+    padding: 0;
+}
+
+.w3-button a {
+    text-decoration: none;
+    display: block;
+    color: white !important;
+    padding: 8px 16px;
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 768px) {
     .button-fstart {
-        /* border: 3px solid red; */
         position: relative;
         display: flex;
         justify-content: center;

@@ -1,106 +1,118 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { css } from '@emotion/css';
 import SliderContent from './SliderContent';
-import Slide from './Slide';
 import Arrow from '../Arrow/Arrow';
 import Dots from '../Dots/Dots';
+import './Slider.css';
 
-const getWidth = () => window.innerWidth
+const getWidth = () => window.innerWidth;
 
-/**
- * @function Slider
- */
-const Slider = props => {
-  const [state, setState] = useState({
-    activeSlide: 0,
-    translate: 0,
-    transition: 0.45
-  })
-  const { translate, transition, activeSlide } = state
-  const autoPlayRef = useRef()
+const Slider = (props) => {
+    const { slides } = props;
+    const firstSlide = slides[0];
+    const secondSlide = slides[1];
+    const lastSlide = slides[slides.length - 1];
 
-  useEffect(() => {
-    autoPlayRef.current = nextSlide
-  })
+    const [state, setState] = useState({
+        activeSlide: 0,
+        translate: getWidth(),
+        transition: 0.45,
+        _slides: [lastSlide, firstSlide, secondSlide],
+    });
 
-  useEffect(() => {
-    const play = () => {
-      autoPlayRef.current()
-    }
+    const { activeSlide, translate, transition, _slides } = state;
 
-    if (props.autoPlay !== null) {
-      const interval = setInterval(play, props.autoPlay * 1000)
-      return () => clearInterval(interval)
-    }
-  }, [props.autoPlay])
+    const transitionRef = useRef();
+    const resizeRef = useRef();
 
-  const nextSlide = () => {
-    if (activeSlide === props.slides.length - 1) {
-      return setState({
-        ...state,
-        translate: 0,
-        activeSlide: 0
-      })
-    }
+    useEffect(() => {
+        transitionRef.current = smoothTransition;
+        resizeRef.current = handleResize;
+    });
 
-    setState({
-      ...state,
-      activeSlide: activeSlide + 1,
-      translate: (activeSlide + 1) * getWidth()
-    })
-  }
+    useEffect(() => {
+        const smooth = (e) => {
+            if (e.target.className.includes('css')) {
+                transitionRef.current();
+            }
+        };
 
-  const prevSlide = () => {
-    if (activeSlide === 0) {
-      return setState({
-        ...state,
-        translate: (props.slides.length - 1) * getWidth(),
-        activeSlide: props.slides.length - 1
-      })
-    }
+        const resize = () => {
+            resizeRef.current();
+        };
 
-    setState({
-      ...state,
-      activeSlide: activeSlide - 1,
-      translate: (activeSlide - 1) * getWidth()
-    })
-  }
+        const transitionEnd = window.addEventListener('transitionend', smooth);
+        const onResize = window.addEventListener('resize', resize);
 
-  return (
-    <div className={SliderCSS}>
-      <SliderContent
-        translate={translate}
-        transition={transition}
-        width={getWidth() * props.slides.length}
-      >
-        {props.slides.map((slide, i) => (
-          <Slide key={slide + i} content={slide} />
-        ))}
-      </SliderContent>
+        return () => {
+            window.removeEventListener('transitionend', transitionEnd);
+            window.removeEventListener('resize', onResize);
+        };
+    }, []);
 
-      {/* {!props.autoPlay && (
-        <> */}
-          <Arrow direction="left" handleClick={prevSlide} />
-          <Arrow direction="right" handleClick={nextSlide} />
-        {/* </>
-      )} */}
+    useEffect(() => {
+        if (transition === 0) setState({ ...state, transition: 0.45 });
+    }, [state, transition]);
 
-      <Dots slides={props.slides} activeSlide={activeSlide} />
-    </div>
-  )
-}
+    const nextSlide = () => {
+        clearInterval();
+        setState({
+            ...state,
+            translate: translate + getWidth(),
+            activeSlide:
+                activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+        });
+    };
+
+    const prevSlide = () => {
+        setState({
+            ...state,
+            translate: 0,
+            activeSlide:
+                activeSlide === 0 ? slides.length - 1 : activeSlide - 1,
+        });
+    };
+
+    const smoothTransition = () => {
+        let _slides = [];
+
+        if (activeSlide === slides.length - 1)
+            _slides = [slides[slides.length - 2], lastSlide, firstSlide];
+        else if (activeSlide === 0)
+            _slides = [lastSlide, firstSlide, secondSlide];
+        else _slides = slides.slice(activeSlide - 1, activeSlide + 2);
+
+        setState({
+            ...state,
+            _slides,
+            transition: 0,
+            translate: getWidth(),
+        });
+    };
+
+    const handleResize = () => {
+        setState({ ...state, translate: getWidth(), transition: 0 });
+    };
+
+    return (
+        <div className="slider-div">
+            <SliderContent
+                translate={translate}
+                transition={transition}
+                width={getWidth() * _slides.length}
+            >
+                {_slides.map((_slide) => _slide)}
+            </SliderContent>
+
+            <Arrow direction="left" handleClick={prevSlide} />
+            <Arrow direction="right" handleClick={nextSlide} />
+
+            <Dots slides={slides} activeSlide={activeSlide} />
+        </div>
+    );
+};
 
 Slider.defaultProps = {
-  slides: [],
-  autoPlay: null
-}
+    slides: [],
+};
 
-const SliderCSS = css`
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  overflow: hidden;
-`
-
-export default Slider
+export default Slider;

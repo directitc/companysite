@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import ScrollToTop from '../../../containers/ScrollToTop/ScrollToTop';
@@ -6,9 +6,9 @@ import './NavBar.css';
 
 const NavBar = (props) => {
     return (
-        <nav className="navbar">
+        <Fragment>
             <FaBars className="bars" onClick={props.drawerToggleClicked} />
-            <div className="navbar-menu">
+            <nav className="navbar">
                 <ScrollToTop>
                     <NavLink className="navbar-link" to="/" exact>
                         Home
@@ -23,8 +23,8 @@ const NavBar = (props) => {
                         Contact
                     </NavLink>
                 </ScrollToTop>
-            </div>
-        </nav>
+            </nav>
+        </Fragment>
     );
 };
 

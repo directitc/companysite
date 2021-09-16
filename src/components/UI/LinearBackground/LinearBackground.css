@@ -1,0 +1,17 @@
+.linear-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(
+            181.07deg,
+            rgba(37, 43, 66, 0.96) 24.48%,
+            rgba(37, 43, 66, 0.288) 88.6%
+        ),
+        url('../../../assets/images/services-system-integration.png');
+}
+
+@media (max-width: 600px) {
+    .linear-background {
+        background-image: none !important;
+    }
+}
