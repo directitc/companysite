@@ -1,12 +1,4 @@
-.slider1-subsection {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 1000px;
-}
-
-.slider1-button-wrapper {
+.slider1-btn-wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;

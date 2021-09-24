@@ -42,10 +42,8 @@
 
 .message-text {
     color: rgba(0, 0, 0, 0.6);
-    font-family: 'Roboto';
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 40px;
+    font-size: 2.3rem;
+    line-height: 4rem;
 }
 
 .message-subtitle {
@@ -53,9 +51,9 @@
     display: block;
     text-align: left;
     width: 60%;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-style: italic;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .message-contact-form {
@@ -64,13 +62,13 @@
 
 .message-contact-form input {
     background-color: lightgray;
-    height: 50px;
+    height: 5rem;
     width: 75%;
 }
 
 .message-contact-form textarea {
     background-color: lightgray;
-    height: 250px;
+    height: 25rem;
 }
 
 @media (max-width: 768px) {
@@ -85,7 +83,7 @@
     }
     .message-subtitle {
         text-align: center;
-        font-size: 15px;
+        /* font-size: 1.5rem; */
         width: 75%;
     }
     .message-logo-contact {
@@ -93,14 +91,14 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding-bottom: 16px !important;
+        padding-bottom: 1.6rem !important;
     }
     .message-text {
-        font-size: 22px;
-        padding: 0px !important;
+        font-size: 2.2rem;
+        padding: 0rem !important;
     }
     .message-questions {
-        padding: 0px !important;
+        padding: 0rem !important;
         display: flex;
         flex-direction: column;
     }
@@ -114,6 +112,6 @@
         width: 90%;
     }
     .message-text {
-        font-size: 20px;
+        font-size: 2rem;
     }
 }

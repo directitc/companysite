@@ -3,17 +3,23 @@ import { HashLink as Link } from 'react-router-hash-link';
 import './Button.css';
 
 const Button = ({ classStyle, name, type, link }) => {
-    return (
-        <button className={classStyle} type={type}>
-            {type === 'submit' ? (
-                name
-            ) : (
-                <Link to={link} className="link-button">
-                    {name}
-                </Link>
-            )}
-        </button>
-    );
+    let btnType;
+
+    if (type === 'submit') {
+        btnType = (
+            <button className={classStyle} type={type}>
+                {name}
+            </button>
+        );
+    } else {
+        btnType = (
+            <Link className={classStyle} to={link}>
+                {name}
+            </Link>
+        );
+    }
+
+    return btnType;
 };
 
 export default Button;

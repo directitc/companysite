@@ -19,7 +19,7 @@ const Home = () => {
                     <Navigation />
                 </div>
                 <div className="about-content">
-                    <Slider slides={slides} autoPlay={5} />
+                    <Slider slides={slides} />
                 </div>
             </div>
             <About />

@@ -56,12 +56,11 @@ const ContactForm = ({ classStyle }) => {
                     required
                 />
             </div>
-            <div className="button-fstart w3-padding-small w3-padding-32">
+            <div className="btn-fstart w3-padding-32">
                 <Button
-                    classStyle="w3-button w3-large contact-button-background submit-button"
+                    classStyle="btn w3-large btn-submit"
                     name="Submit"
                     type="submit"
-                    link=""
                 />
             </div>
         </form>

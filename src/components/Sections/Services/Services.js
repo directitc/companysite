@@ -39,9 +39,9 @@ const Services = () => {
                     subtitle={servicesSubtitle3}
                 />
             </div>
-            <div className="services-button-wrapper w3-padding-16">
+            <div className="services-btn-wrapper w3-padding-16">
                 <Button
-                    classStyle="w3-button w3-large"
+                    classStyle="btn w3-large"
                     name={servicesButton}
                     type="button"
                     link="/services"

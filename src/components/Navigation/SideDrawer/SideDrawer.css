@@ -7,7 +7,7 @@
     top: 0;
     z-index: 200;
     background-color: #252b42;
-    padding: 32px 16px;
+    padding: 3.2rem 1.6rem;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
 }
@@ -27,22 +27,22 @@
 }
 
 .sidedrawer-nav-item {
-    border-top: 1px solid white;
-    margin: 10px;
+    border-top: .1rem solid white;
+    margin: 1rem;
     box-sizing: border-box;
     display: block;
     height: 100%;
 }
 
 .sidedrawer-nav-item a {
-    border-bottom: 1px solid white;
+    border-bottom: .1rem solid white;
     color: white;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
     display: block;
     line-height: 2em;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .sidedrawer-nav-item a:hover,

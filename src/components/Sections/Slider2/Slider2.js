@@ -24,9 +24,9 @@ const Slider2 = () => {
                                 classStyle="subtitle"
                                 subtitle={systemIntegrationSubtitle}
                             ></Subtitle>
-                            <div className="slider1-button-wrapper w3-padding-16">
+                            <div className="slider1-btn-wrapper w3-padding-16">
                                 <Button
-                                    classStyle="button-center w3-button w3-large"
+                                    classStyle="btn-center btn w3-large"
                                     name={systemIntegrationButton}
                                     type="button"
                                     link="/services#system-integration"

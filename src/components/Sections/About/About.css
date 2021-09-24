@@ -13,27 +13,25 @@
     color: rgba(0, 0, 0, 0.6);
     display: flex;
     letter-spacing: 0;
-    font-family: 'Roboto';
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25px;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
 }
 
-.about-button-wrapper {
+.about-btn-wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-top: 25px;
+    padding-top: 2.5rem;
 }
 
 @media (max-width: 768px) {
     .about-text {
         width: 100%;
-        font-size: 18px;
+        font-size: 1.8rem;
         text-align: center;
     }
-    .about-button-wrapper {
+    .about-btn-wrapper {
         justify-content: center;
     }
     .about-section {

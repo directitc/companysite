@@ -27,9 +27,9 @@ const AboutSection = () => {
                         classStyle="about-text w3-padding-16"
                         text={aboutText}
                     />
-                    <div className="about-button-wrapper">
+                    <div className="about-btn-wrapper">
                         <Button
-                            classStyle="w3-button w3-large"
+                            classStyle="btn w3-large"
                             name={aboutButton}
                             type="button"
                             link="/about"

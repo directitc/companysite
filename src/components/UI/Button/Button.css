@@ -1,67 +1,52 @@
-.button-center {
+.btn-center {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button-fstart {
+.btn-fstart {
     position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.button-fend {
+.btn-fend {
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.button {
-    background-color: rgba(190, 183, 124, 1);
-    color: white;
-    width: 200px;
-    height: 25px;
-    display: flex;
-    padding: 12px 37px;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto';
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.w3-button {
-    width: 200px;
+.btn {
+    border: none;
     display: inline-block;
     vertical-align: middle;
     overflow: hidden;
-    padding: 8px 16px;
-    background-color: rgba(190, 183, 124, 1);
+    text-decoration: none;
     color: white;
+    background-color: rgba(190, 183, 124, 1);
+    width: 200px;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    font-family: 'Roboto';
-    font-size: 24px;
-    font-weight: 400;
-    padding: 0;
+    font-size: 2.4rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.5rem;
 }
 
-.w3-button a {
-    text-decoration: none;
-    display: block;
+.btn-submit {
+    padding: 1.1rem 1.6rem;
+}
+
+.btn:hover {
     color: white !important;
-    padding: 8px 16px;
-    width: 100%;
-    height: 100%;
+    background-color: rgb(209, 200, 117) !important;
 }
 
 @media (max-width: 768px) {
-    .button-fstart {
+    .btn-fstart {
         position: relative;
         display: flex;
         justify-content: center;

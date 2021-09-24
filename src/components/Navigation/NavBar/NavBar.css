@@ -1,13 +1,11 @@
 .navbar {
     background: #ffffff;
     width: 500px;
-    height: 60px;
+    height: 6rem;
     display: flex;
-    margin: 15px;
+    margin: 1.5rem;
     z-index: 12;
-    font-family: 'Roboto';
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 2.4rem;
     line-height: normal;
 }
 
@@ -37,8 +35,11 @@
     display: none;
     color: #808080;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
+    font-size: 4rem;
+    cursor: pointer;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -47,8 +48,5 @@
     }
     .bars {
         display: flex;
-        font-size: 2.5rem;
-        cursor: pointer;
-        color: white;
     }
 }
