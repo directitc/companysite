@@ -75,10 +75,10 @@
     }
     .data-migration__img-div {
         float: left;
-        width: 90%;
+        width: 100%;
     }
     .data-migration__textbox {
         float: left;
-        width: 90%;
+        width: 100%;
     }
 }

@@ -81,7 +81,7 @@
         align-items: center;
     }
     .services-section__img-text {
-        width: 90%;
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }

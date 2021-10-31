@@ -77,10 +77,10 @@
     }
     .data-analytics__img-div {
         float: left;
-        width: 90%;
+        width: 100%;
     }
     .data-analytics__textbox {
         float: left;
-        width: 90%;
+        width: 100%;
     }
 }
