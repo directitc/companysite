@@ -98,7 +98,7 @@
 
 @media (max-width: 768px) {
     .footer__div {
-        width: 90%;
+        width: 100%;
     }
     .footer__subtitle {
         font-size: 2rem;

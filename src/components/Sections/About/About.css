@@ -96,10 +96,10 @@
     }
     .about-section__img-div {
         float: left;
-        width: 90%;
+        width: 100%;
     }
     .about-section__textbox {
         float: left;
-        width: 90%;
+        width: 100%;
     }
 }

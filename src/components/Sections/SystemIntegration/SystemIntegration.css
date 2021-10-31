@@ -75,10 +75,10 @@
     }
     .system-integration__img-div {
         float: left;
-        width: 90%;
+        width: 100%;
     }
     .system-integration__textbox {
         float: left;
-        width: 90%;
+        width: 100%;
     }
 }
