@@ -45,7 +45,7 @@
 
 @media (max-width: 768px) {
     .services__header {
-        height: 46vh;
+        height: 44rem;
     }
     .services__footer {
         flex-direction: column;
