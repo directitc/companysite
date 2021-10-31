@@ -5,16 +5,16 @@ import ScrollToTop from '../../../containers/ScrollToTop/ScrollToTop';
 import './SideDrawer.css';
 
 const SideDrawer = (props) => {
-    let attachedClasses = ['side-drawer', 'side-drawer-close'];
+    let attachedClasses = ['sidedrawer', 'sidedrawer__close'];
     if (props.open) {
-        attachedClasses = ['side-drawer', 'side-drawer-open'];
+        attachedClasses = ['sidedrawer', 'sidedrawer__open'];
     }
 
     return (
         <Fragment>
             <Backdrop show={props.open} clicked={props.closed} />
             <div className={attachedClasses.join(' ')} onClick={props.closed}>
-                <nav className="sidedrawer-nav-item">
+                <nav className="sidedrawer__link">
                     <ScrollToTop>
                         <NavLink to="/" exact>Home</NavLink>
                         <NavLink to="/about">About</NavLink>
@@ -27,4 +27,4 @@ const SideDrawer = (props) => {
     );
 };
 
-export default SideDrawer;
+export default React.memo(SideDrawer);

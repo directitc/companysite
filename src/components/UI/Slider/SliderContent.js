@@ -15,4 +15,4 @@ const SliderContent = (props) => (
     </div>
 );
 
-export default SliderContent;
+export default React.memo(SliderContent);

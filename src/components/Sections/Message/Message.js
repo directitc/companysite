@@ -4,70 +4,71 @@ import Text from '../../UI/Text/Text';
 import Link from '../../UI/Link/Link';
 import Icon from '../../UI/Icon/Icon';
 import Image from '../../UI/Image/Image';
+import Logo from '../../../assets/images/full-logo-black.png';
 import ContactForm from '../../Forms/ContactForm/ContactForm';
 import { FaPhone, FaRegEnvelope } from 'react-icons/fa';
 import './Message.css';
 
-const Message = ({ classStyle, image }) => {
+const Message = () => {
     const messageTip =
         '*Fill out and submit the form below and we will contact you shortly.*';
     const messageSubtitle = 'Already with us?';
     const messageSubtitle2 = 'Send your questions here:';
 
     return (
-        <div className={classStyle}>
-            <div className="message-section">
-                <div className="w3-third w3-center w3-padding-large message-form">
-                    <Subtitle
-                        classStyle="message-subtitle"
-                        subtitle={messageTip}
-                    />
-                    <ContactForm classStyle="w3-padding-32 message-contact-form" />
-                </div>
-                <div className="w3-padding-bottom-32 message-subsection">
-                    <div className="w3-padding-bottom-64 message-logo-contact">
-                        <div className="message-logo">
-                            <Image classStyle="footer-data-image" src={image} />
+        <div className="message">
+            <div className="message__div">
+                <Subtitle
+                    classStyle="message__subtitle"
+                    subtitle={messageTip}
+                />
+                <ContactForm classStyle="message__contact-form" />
+                <div className="message__section">
+                    <div className="message__contact-info">
+                        <div className="message__img-div">
+                            <Image classStyle="message__img" src={Logo} />
                         </div>
-                        <div className="footer-text-wrapper message-contact">
+                        <div className="message__textbox">
                             <div>
-                                <Icon classStyle="icon" icon={<FaPhone />} />
+                                <Icon
+                                    classStyle="message__icon"
+                                    icon={<FaPhone />}
+                                />
                                 <Link
-                                    classStyle="link message-text"
+                                    classStyle="message__link"
                                     href="tel:801-660-7780"
                                     link="(801) 660-7780"
                                 />
                             </div>
                             <div>
                                 <Icon
-                                    classStyle="icon"
+                                    classStyle="message__icon"
                                     icon={<FaRegEnvelope />}
                                 />
                                 <Link
-                                    classStyle="link message-text"
+                                    classStyle="message__link"
                                     href="mailto:admin@directitc.com"
                                     link="admin@directitc.com"
                                 />
                             </div>
                         </div>
                     </div>
-                    <div
-                        className={
-                            'w3-padding-top-32 w3-padding-bottom-64 message-questions'
-                        }
-                    >
+                    <div className={'message__questions'}>
                         <Text
-                            classStyle="text text-spacing message-text"
+                            classStyle="message__text"
                             text={messageSubtitle}
                         />
                         <Text
-                            classStyle="text message-text"
+                            classStyle="message__text"
                             text={messageSubtitle2}
                         />
                         <div>
-                            <Icon classStyle="icon" icon={<FaRegEnvelope />} />
+                            <Icon
+                                classStyle="message__icon"
+                                icon={<FaRegEnvelope />}
+                            />
                             <Link
-                                classStyle="link message-text"
+                                classStyle="message__link"
                                 href="mailto:support@directitc.com"
                                 link="support@directitc.com"
                             />
@@ -79,4 +80,4 @@ const Message = ({ classStyle, image }) => {
     );
 };
 
-export default Message;
+export default React.memo(Message);

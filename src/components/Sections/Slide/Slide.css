@@ -1,0 +1,138 @@
+.slide {
+    width: 100%;
+}
+
+.slide__div {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 57vh;
+    padding-bottom: 6.4rem;
+}
+
+.slide__textbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 16vw;
+    align-items: center;
+    padding-bottom: .3rem;
+}
+
+.slide__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide__title {
+    color: white;
+    position: relative;
+    display: flex;
+    letter-spacing: 0;
+    font-size: 5rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    justify-content: flex-start;
+}
+
+.slide__subtitle {
+    color: rgba(255, 255, 255, 0.66);
+    position: relative;
+    display: flex;
+    letter-spacing: 0;
+    font-size: 3.2rem;
+    justify-content: flex-start;
+}
+
+.slide__btn-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.8rem;
+    width: 100%;
+}
+
+.slide__btn {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(190, 183, 124, 1);
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 2.4rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.8rem;
+}
+
+.slide__btn:hover {
+    color: white !important;
+    background-color: rgb(209, 200, 117) !important;
+}
+
+.slide--radial-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: radial-gradient(
+            47.46% 35.25% at 35.88% 67.94%,
+            rgba(37, 43, 66, 0.288) 0%,
+            rgba(37, 43, 66, 0.96) 80%
+        ),
+        url('../../../assets/images/services-data-migration.png');
+}
+
+.slide--linear-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(
+            181.07deg,
+            rgba(37, 43, 66, 0.96) 24.48%,
+            rgba(37, 43, 66, 0.288) 88.6%
+        ),
+        url('../../../assets/images/services-system-integration.png');
+}
+
+@media (max-width: 768px) {
+    .slide__div {
+        justify-content: center;
+        width: 100%;
+        height: 46vh;
+        padding-bottom: 5rem;
+    }
+
+    .slide__textbox {
+        padding: 0;
+        padding-bottom: 1.7rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .slide__div {
+        height: 46vh;
+        padding-bottom: 0;
+    }
+    .slide__textbox {
+        display: none !important;
+    }
+    .slide--radial-bg {
+        background-image: none !important;
+    }
+    .slide--linear-bg {
+        background-image: none !important;
+    }
+}

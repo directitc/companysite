@@ -23,4 +23,4 @@ const Dots = ({ slides, activeSlide }) => (
     </div>
 );
 
-export default Dots;
+export default React.memo(Dots);

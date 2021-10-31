@@ -22,32 +22,32 @@ const DataAnalytics = () => {
 
     for (let i = 0; i < bulletedList.length; i++) {
         bullets.push(
-            <div className="data-analytics-list">
-                <Icon classStyle="data-analytics-icon" icon={<FaDotCircle />} />
-                <Text classStyle="data-analytics-text" text={bulletedList[i]} />
+            <div className="data-analytics__list">
+                <Icon classStyle="data-analytics__icon" icon={<FaDotCircle />} />
+                <Text classStyle="data-analytics__text" text={bulletedList[i]} />
             </div>
         );
     }
 
     return (
-        <div className="w3-padding-64 w3-container data-analytics">
-            <div className="w3-content data-analytics-section">
-                <div className="w3-third w3-center w3-padding-small w3-padding-32">
+        <div id="data-analytics" className="data-analytics">
+            {/* <div className="data-analytics__div"> */}
+                <div className="data-analytics__img-div">
                     <Image
-                        classStyle="data-analytics-image"
+                        classStyle="data-analytics__img"
                         src={DataAnalyticsImage}
                     />
                 </div>
-                <div className="w3-twothird w3-padding-large w3-padding-32">
+                <div className="data-analytics__textbox">
                     <Title
-                        classStyle="title title-fstart title-dark-gray"
+                        classStyle="data-analytics__title"
                         title={dataAnalyticsTitle}
                     />
                     {bullets}
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 };
 
-export default DataAnalytics;
+export default React.memo(DataAnalytics);

@@ -1,52 +1,18 @@
-.message-section {
+.message {
+    padding-top: 3.2rem;
+    background-color: white;
+}
+
+.message__div {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1.2rem 2.4rem;
 }
 
-.message-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.message-subsection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-}
-
-.message-logo-contact {
-    width: 50%;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.message-logo {
-    width: 62%;
-}
-
-.message-contact {
-    margin-left: 6%;
-}
-
-.message-questions {
-    width: 100%;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.message-text {
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 2.3rem;
-    line-height: 4rem;
-}
-
-.message-subtitle {
+.message__subtitle {
     color: rgba(0, 0, 0, 0.6);
     display: block;
     text-align: left;
@@ -56,62 +22,120 @@
     font-weight: 400;
 }
 
-.message-contact-form {
+.message__contact-form {
     width: 60%;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
 }
 
-.message-contact-form input {
+.message__contact-form input {
     background-color: lightgray;
     height: 5rem;
     width: 75%;
 }
 
-.message-contact-form textarea {
+.message__contact-form textarea {
     background-color: lightgray;
     height: 25rem;
 }
 
+.message__section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.message__contact-info {
+    width: 50%;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 6.4rem;
+}
+
+.message__img-div {
+    width: 62%;
+}
+
+.message__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message__textbox {
+    margin-left: 6%;
+}
+
+.message__icon {
+    position: relative;
+    top: 0.5rem;
+    padding-right: 1.2rem;
+    font-size: 2.2rem;
+}
+
+.message__link {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 2.3rem;
+    line-height: 4rem;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.message__link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.message__questions {
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 6.4rem;
+}
+
+.message__text {
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 2.3rem;
+    line-height: 4rem;
+}
+
 @media (max-width: 768px) {
-    .message-contact {
-        flex-direction: column;
-    }
-    .message-contact-form {
+    .message__subtitle {
+        text-align: center;
         width: 75%;
     }
-    .message-contact-form input {
+    .message__contact-form {
+        width: 75%;
+    }
+    .message__contact-form input {
         width: 100%;
     }
-    .message-subtitle {
-        text-align: center;
-        /* font-size: 1.5rem; */
-        width: 75%;
-    }
-    .message-logo-contact {
+    .message__contact-info {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding-bottom: 1.6rem !important;
     }
-    .message-text {
-        font-size: 2.2rem;
-        padding: 0rem !important;
+    .message__textbox {
+        flex-direction: column;
     }
-    .message-questions {
-        padding: 0rem !important;
+    .message__questions {
         display: flex;
         flex-direction: column;
     }
 }
 
-@media (max-width: 550px) {
-    .message-contact-form {
+@media (max-width: 600px) {
+    .message__subtitle {
         width: 90%;
     }
-    .message-subtitle {
+    .message__contact-form {
         width: 90%;
     }
-    .message-text {
+    .message__text {
         font-size: 2rem;
     }
 }

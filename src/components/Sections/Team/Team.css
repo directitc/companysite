@@ -1,12 +1,29 @@
-.team-section {
-    padding: 0;
+.team {
+    padding: 1rem 3.2rem;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
 }
 
-.team-title {
+.team__div {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+    padding: 2rem .5rem;
+}
+
+.team__title {
+    color: #252B42;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1em;
     justify-content: flex-start;
 }
 
-.team-subtitle {
+.team__subtitle {
     color: rgba(0, 0, 0, 0.6);
     position: relative;
     display: flex;
@@ -15,20 +32,45 @@
     font-size: 3.2rem;
 }
 
-.team-text {
+.team__text {
     color: rgba(0, 0, 0, 0.6);
     position: relative;
     letter-spacing: 0;
     font-size: 1.8rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
 }
 
-.team-contact {
-    padding-top: 1.5rem;
+.team__contact-info {
+    position: relative;
+    padding-top: .8rem;
+}
+
+.team__icon {
+    position: relative;
+    top: .4rem;
+    padding-right: 1rem;
+    font-size: 2.2rem;
+}
+
+.team__link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.8rem;
+}
+
+.team__link:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .team-subtitle {
+    .team__title {
+        font-size: 4.4rem;
+    }
+    .team__subtitle {
         font-size: 2.6rem;
+    }
+    .team__div {
+        width: 90%;
     }
 }

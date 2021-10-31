@@ -7,19 +7,19 @@ import './NavBar.css';
 const NavBar = (props) => {
     return (
         <Fragment>
-            <FaBars className="bars" onClick={props.drawerToggleClicked} />
+            <FaBars className="navbar__hamburger" onClick={props.drawerToggleClicked} />
             <nav className="navbar">
                 <ScrollToTop>
-                    <NavLink className="navbar-link" to="/" exact>
+                    <NavLink className="navbar__link" to="/" exact>
                         Home
                     </NavLink>
-                    <NavLink className="navbar-link" to="/about">
+                    <NavLink className="navbar__link" to="/about">
                         About
                     </NavLink>
-                    <NavLink className="navbar-link" to="/services">
+                    <NavLink className="navbar__link" to="/services">
                         Services
                     </NavLink>
-                    <NavLink className="navbar-link" to="/contact">
+                    <NavLink className="navbar__link" to="/contact">
                         Contact
                     </NavLink>
                 </ScrollToTop>
@@ -28,4 +28,4 @@ const NavBar = (props) => {
     );
 };
 
-export default NavBar;
+export default React.memo(NavBar);

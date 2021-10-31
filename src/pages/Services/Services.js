@@ -13,13 +13,11 @@ const Services = () => {
     const servicesSubtitle = 'Consult with IT experts';
 
     return (
-        <div className="about">
-            <div className="about-navigation">
-                <Navigation />
-            </div>
-            <div className="about-content">
+        <div className="services">
+            <Navigation />
+            <div className="services__content">
                 <Header
-                    classStyle="w3-container about-header"
+                    classStyle="services__header"
                     title={servicesTitle}
                     subtitle={servicesSubtitle}
                 />
@@ -27,7 +25,7 @@ const Services = () => {
                 <DataAnalytics />
                 <SystemIntegration />
                 <Footer
-                    classStyle="w3-padding-64 w3-container services-footer"
+                    classStyle="services__footer"
                     image={FooterLogo}
                 />
             </div>
@@ -35,4 +33,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default React.memo(Services);

@@ -12,23 +12,18 @@ const About = () => {
 
     return (
         <div className="about">
-            <div className="about-navigation">
-                <Navigation />
-            </div>
-            <div className="about-content">
+            <Navigation />
+            <div className="about__content">
                 <Header
-                    classStyle="about-header blue-background"
+                    classStyle="about__header"
                     title={aboutTitle}
                     subtitle={aboutSubtitle}
                 />
-                <Team classStyle="w3-padding-64 w3-container" />
-                <Footer
-                    classStyle="w3-padding-64 w3-container about-footer"
-                    image={FooterLogo}
-                />
+                <Team />
+                <Footer classStyle="about__footer" image={FooterLogo} />
             </div>
         </div>
     );
 };
 
-export default About;
+export default React.memo(About);

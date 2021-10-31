@@ -1,24 +1,28 @@
-.footer-color {
-    color: #000;
-}
-
-.footer-div {
+.footer__div {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
 }
 
-.footer-message {
-    width: 100%;
+.footer__title {
+    color: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0;
+    font-size: 4.7rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
 }
 
-.footer-data-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.footer-subtitle {
+.footer__subtitle {
     color: rgba(0, 0, 0, 0.6);
     position: relative;
     display: flex;
@@ -29,7 +33,12 @@
     padding-bottom: 1rem;
 }
 
-.footer-list-wrapper {
+.footer__contact-form {
+    width: 100%;
+    padding: .4rem .8rem;
+}
+
+.footer__list {
     text-align: center;
     list-style-position: inside;
     display: flex;
@@ -37,20 +46,7 @@
     justify-content: center;
 }
 
-.footer-list-wrapper a:hover {
-    color: rgba(190, 183, 124, 1);
-}
-
-.footer-text-wrapper {
-    font-size: 1.8rem;
-    line-height: 1.7em;
-}
-
-.footer-btn-background {
-    background-color: #333333;
-}
-
-.navlink {
+.footer__navlink {
     width: 100%;
     text-decoration: none;
     font-size: 2rem;
@@ -58,12 +54,53 @@
     cursor: pointer;
 }
 
-.navlink:hover {
-    color: gray;
+.footer__navlink:hover {
+    color: rgba(190, 183, 124, 1);
+}
+
+.footer__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer__textbox {
+    font-size: 1.8rem;
+    line-height: 1.7em;
+    padding-bottom: 3.2rem;
+}
+
+.footer__icon {
+    position: relative;
+    top: .5rem;
+    padding-right: 1.2rem;
+    font-size: 2.2rem;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer__text {
+    display: inline-block;
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 
 @media (max-width: 768px) {
-    .footer-subtitle {
+    .footer__div {
+        width: 90%;
+    }
+    .footer__subtitle {
         font-size: 2rem;
     }
 }

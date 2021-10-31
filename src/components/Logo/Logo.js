@@ -7,13 +7,13 @@ import './Logo.css';
 const Logo = () => {
     return (
         <Fragment>
-            <img className="logo" alt="" src={LogoImg} />
-            <div className="logo-div">
-                <img className="logo-circle" alt="" src={LogoImgCircle} />
-                <img className="logo-text" alt="" src={LogoImgText} />
+            <img className="logo__full" alt="" src={LogoImg} />
+            <div className="logo">
+                <img className="logo__circle" alt="" src={LogoImgCircle} />
+                <img className="logo__text" alt="" src={LogoImgText} />
             </div>
         </Fragment>
     );
 };
 
-export default Logo;
+export default React.memo(Logo);

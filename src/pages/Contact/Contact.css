@@ -1,31 +1,49 @@
-.contact-header {
+.contact {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0% 100%;
+}
+
+.contact__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-area: 1/2;
+}
+
+.contact__header {
+    width: 100%;
     background-color: #252b42;
 }
 
-.contact-message {
-    background-color: white;
-}
-
-.contact-footer {
-    background-color: #252b42;
+.contact__footer {
     color: white;
+    background-color: #252b42;
     display: flex;
     justify-content: center;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
 }
 
-.contact-footer h1 {
+.contact__footer h1 {
     color: white;
 }
 
-.contact-footer span {
+.contact__footer span {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.contact-footer a {
+.contact__footer a {
     color: white;
 }
 
-.contact-footer button {
+.contact__footer button {
     background-color: #333333;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .contact__header {
+        height: 46vh;
+    }
 }

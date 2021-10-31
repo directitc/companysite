@@ -23,72 +23,72 @@ const Footer = ({ classStyle, image }) => {
     return (
         <Fragment>
             <div className={classStyle}>
-                <div className="w3-third w3-center w3-padding-16 footer-div">
+                <div className="footer__div">
                     <Title
-                        classStyle="title footer-color"
+                        classStyle="footer__title"
                         title={contactTitle}
                     />
                     <Subtitle
-                        classStyle="footer-subtitle"
+                        classStyle="footer__subtitle"
                         subtitle={contactSubtitle}
                     />
-                    <ContactForm classStyle="w3-padding-small footer-message" />
+                    <ContactForm classStyle="footer__contact-form" />
                 </div>
-                <div className="w3-third w3-center w3-padding-16 footer-div">
+                <div className="footer__div">
                     <Title
-                        classStyle="title footer-color"
+                        classStyle="footer__title"
                         title={sitmapTitle}
                     />
                     <Subtitle
-                        classStyle="footer-subtitle"
+                        classStyle="footer__subtitle"
                         subtitle={sitemapSubtitle}
                     />
-                    <ul className="footer-list-wrapper">
+                    <ul className="footer__list">
                         <ScrollToTop>
-                            <NavLink className="navlink" to="/" exact>
+                            <NavLink className="footer__navlink" to="/" exact>
                                 Home
                             </NavLink>
-                            <NavLink className="navlink" to="/about">
+                            <NavLink className="footer__navlink" to="/about">
                                 About
                             </NavLink>
-                            <NavLink className="navlink" to="/services">
+                            <NavLink className="footer__navlink" to="/services">
                                 Services
                             </NavLink>
-                            <NavLink className="navlink" to="/contact">
+                            <NavLink className="footer__navlink" to="/contact">
                                 Contact
                             </NavLink>
                         </ScrollToTop>
                     </ul>
                 </div>
-                <div className="w3-third w3-center w3-padding-16 footer-div">
+                <div className="footer__div">
                     <div>
-                        <Image classStyle="footer-data-image" src={image} />
+                        <Image classStyle="footer__img" src={image} />
                     </div>
-                    <div className="footer-text-wrapper">
+                    <div className="footer__textbox">
                         <div>
-                            <Icon classStyle="icon" icon={<FaPhone />} />
+                            <Icon classStyle="footer__icon" icon={<FaPhone />} />
                             <Link
-                                classStyle="link"
+                                classStyle="footer__link"
                                 href="tel:801-660-7780"
                                 link="(801) 660-7780"
                             />
                         </div>
                         <div>
-                            <Icon classStyle="icon" icon={<FaRegEnvelope />} />
+                            <Icon classStyle="footer__icon" icon={<FaRegEnvelope />} />
                             <Link
-                                classStyle="link"
+                                classStyle="footer__link"
                                 href="mailto:admin@directitc.com"
                                 link="admin@directitc.com"
                             />
                         </div>
                     </div>
-                    <div className="footer-text-wrapper w3-padding-top-32">
-                        <Text classStyle="text" text={questionSubtitle} />
-                        <Text classStyle="text" text={contactSubtitle2} />
+                    <div className="footer__textbox">
+                        <Text classStyle="footer__text" text={questionSubtitle} />
+                        <Text classStyle="footer__text" text={contactSubtitle2} />
                         <div>
-                            <Icon classStyle="icon" icon={<FaRegEnvelope />} />
+                            <Icon classStyle="footer__icon" icon={<FaRegEnvelope />} />
                             <Link
-                                classStyle="link"
+                                classStyle="footer__link"
                                 href="mailto:support@directitc.com"
                                 link="support@directitc.com"
                             />
@@ -101,4 +101,4 @@ const Footer = ({ classStyle, image }) => {
     );
 };
 
-export default Footer;
+export default React.memo(Footer);

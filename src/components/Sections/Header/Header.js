@@ -6,19 +6,17 @@ import './Header.css';
 const Header = ({ classStyle, title, subtitle }) => {
     return (
         <div className={classStyle}>
-            <div className="w3-padding-bottom-64 header-section">
-                <div className="w3-padding-bottom-64 header-subsection">
-                    <div className="header-text">
-                        <Title classStyle="title title-fstart" title={title} />
-                        <Subtitle
-                            classStyle="subtitle subtitle-fstart"
-                            subtitle={subtitle}
-                        ></Subtitle>
-                    </div>
+            <div className="header__div">
+                <div className="header__textbox">
+                    <Title classStyle="header__title" title={title} />
+                    <Subtitle
+                        classStyle="header__subtitle"
+                        subtitle={subtitle}
+                    ></Subtitle>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Header;
+export default React.memo(Header);
