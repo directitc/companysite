@@ -32,38 +32,38 @@ const teamList = [
     },
 ];
 
-const Team = ({ classStyle }) => {
+const Team = () => {
     let teamMembers = [];
 
     for (let i = 0; i < teamList.length; i++) {
         teamMembers.push(
-            <div key={i} className="w3-padding-small w3-padding-32">
+            <div key={i} className="team__div">
                 <Title
-                    classStyle="title title-dark-gray team-title"
+                    classStyle="team__title"
                     title={teamList[i].name}
                 />
                 <Subtitle
-                    classStyle="team-subtitle"
+                    classStyle="team__subtitle"
                     subtitle={teamList[i].title}
                 />
                 {teamList[i].description !== '' ? (
                     <Text
-                        classStyle="team-text"
+                        classStyle="team__text"
                         text={teamList[i].description}
                     />
                 ) : null}
-                <div className="team-contact">
-                    <Icon classStyle="icon" icon={<FaPhone />} />
+                <div className="team__contact-info">
+                    <Icon classStyle="team__icon" icon={<FaPhone />} />
                     <Link
-                        classStyle="link team-text"
+                        classStyle="team__link"
                         href={'tel:' + teamList[i].phone}
                         link={teamList[i].phone}
                     />
                 </div>
-                <div>
-                    <Icon classStyle="icon" icon={<FaRegEnvelope />} />
+                <div className="team__contact-info">
+                    <Icon classStyle="team__icon" icon={<FaRegEnvelope />} />
                     <Link
-                        classStyle="link team-text"
+                        classStyle="team__link"
                         href={'mailto:' + teamList[i].email}
                         link={teamList[i].email}
                     />
@@ -73,10 +73,10 @@ const Team = ({ classStyle }) => {
     }
 
     return (
-        <div className={classStyle}>
-            <div className="w3-content team-section">{teamMembers}</div>
+        <div className="team">
+            {teamMembers}
         </div>
     );
 };
 
-export default Team;
+export default React.memo(Team);

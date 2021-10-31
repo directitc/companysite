@@ -21,35 +21,36 @@ const DataMigration = () => {
 
     for (let i = 0; i < bulletedList.length; i++) {
         bullets.push(
-            <div className="data-migration-list">
-                <Icon classStyle="data-migration-icon" icon={<FaDotCircle />} />
-                <Text classStyle="data-migration-text" text={bulletedList[i]} />
+            <div className="data-migration__list">
+                <Icon
+                    classStyle="data-migration__icon"
+                    icon={<FaDotCircle />}
+                />
+                <Text
+                    classStyle="data-migration__text"
+                    text={bulletedList[i]}
+                />
             </div>
         );
     }
 
     return (
-        <div
-            id="data-migration"
-            className="w3-padding-64 w3-container data-migration"
-        >
-            <div className="w3-content data-migration-section">
-                <div className="w3-third w3-center w3-padding-small w3-padding-32">
-                    <Image
-                        classStyle="data-migration-image"
-                        src={DataMigrationImage}
-                    />
-                </div>
-                <div className="w3-twothird w3-padding-large w3-padding-32">
-                    <Title
-                        classStyle="title title-fstart title-dark-gray"
-                        title={dataMigrationTitle}
-                    />
-                    {bullets}
-                </div>
+        <div id="data-migration" className="data-migration">
+            <div className="data-migration__img-div">
+                <Image
+                    classStyle="data-migration__img"
+                    src={DataMigrationImage}
+                />
+            </div>
+            <div className="data-migration__textbox">
+                <Title
+                    classStyle="data-migration__title"
+                    title={dataMigrationTitle}
+                />
+                {bullets}
             </div>
         </div>
     );
 };
 
-export default DataMigration;
+export default React.memo(DataMigration);

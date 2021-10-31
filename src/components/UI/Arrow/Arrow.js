@@ -39,4 +39,4 @@ const Arrow = ({ direction, handleClick }) => {
     );
 };
 
-export default Arrow;
+export default React.memo(Arrow);

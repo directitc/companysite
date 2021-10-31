@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Navigation from '../../components/Navigation/Navigation';
-import Slider1 from '../../components/Sections/Slider1/Slider1';
-import Slider2 from '../../components/Sections/Slider2/Slider2';
+import Slide from '../../components/Sections/Slide/Slide';
 import Slider from '../../components/UI/Slider/Slider';
 import Services from '../../components/Sections/Services/Services';
 import About from '../../components/Sections/About/About';
@@ -10,26 +9,39 @@ import FooterLogo from '../../assets/images/full-logo-black.png';
 import './Home.css';
 
 const Home = () => {
-    const slides = [<Slider1 />, <Slider2 />];
+    const dataMigrationTitle = 'Data Migration';
+    const dataMigrationSubtitle = 'transfer and consolidate';
+    const systemIntegrationTitle = 'System Integration';
+    const systemIntegrationSubtitle = 'experience a seamless transistion';
+
+    const slides = [
+        <Slide
+            title={dataMigrationTitle}
+            subtitle={dataMigrationSubtitle}
+            button={'Learn More'}
+            link={'/services#data-migration'}
+            background={'slide--radial-bg'}
+        />,
+        <Slide
+            title={systemIntegrationTitle}
+            subtitle={systemIntegrationSubtitle}
+            button={'Learn More'}
+            link={'/services#system-integration'}
+            background={'slide--linear-bg'}
+        />,
+    ];
 
     return (
-        <div className="">
-            <div className="about about-header blue-background">
-                <div className="about-navigation">
-                    <Navigation />
-                </div>
-                <div className="about-content">
-                    <Slider slides={slides} />
-                </div>
+        <Fragment>
+            <div className="home">
+                <Navigation />
+                <Slider slides={slides} />
             </div>
             <About />
             <Services />
-            <Footer
-                classStyle="w3-padding-64 w3-container home-footer"
-                image={FooterLogo}
-            />
-        </div>
+            <Footer classStyle="home__footer" image={FooterLogo} />
+        </Fragment>
     );
 };
 
-export default Home;
+export default React.memo(Home);

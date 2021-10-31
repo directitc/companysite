@@ -7,10 +7,10 @@ const Copyright = () => {
         'Copyright © 2021 Direct IT Consulting, LLC. All rights reserved.';
 
     return (
-        <div className="w3-padding-16 w3-container copyright-background">
-            <Text classStyle="copyright-text" text={copyrightText} />
+        <div className="copyright__background">
+            <Text classStyle="copyright__text" text={copyrightText} />
         </div>
     );
 };
 
-export default Copyright;
+export default React.memo(Copyright);

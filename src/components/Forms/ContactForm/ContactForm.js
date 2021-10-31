@@ -29,7 +29,7 @@ const ContactForm = ({ classStyle }) => {
 
     return (
         <form className={classStyle} onSubmit={handleSubmit}>
-            <div className="contact-form-input">
+            <div className="contact-form">
                 <input
                     type="text"
                     id="name"
@@ -38,7 +38,7 @@ const ContactForm = ({ classStyle }) => {
                     required
                 />
             </div>
-            <div className="contact-form-input">
+            <div className="contact-form">
                 <input
                     type="email"
                     id="email"
@@ -47,7 +47,7 @@ const ContactForm = ({ classStyle }) => {
                     required
                 />
             </div>
-            <div className="contact-form-input">
+            <div className="contact-form">
                 <textarea
                     type="text"
                     id="message"
@@ -56,9 +56,9 @@ const ContactForm = ({ classStyle }) => {
                     required
                 />
             </div>
-            <div className="btn-fstart w3-padding-32">
+            <div className="contact-form__btn-div">
                 <Button
-                    classStyle="btn w3-large btn-submit"
+                    classStyle="contact-form__btn"
                     name="Submit"
                     type="submit"
                 />
@@ -67,4 +67,4 @@ const ContactForm = ({ classStyle }) => {
     );
 };
 
-export default ContactForm;
+export default React.memo(ContactForm);

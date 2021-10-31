@@ -94,7 +94,7 @@ const Slider = (props) => {
     };
 
     return (
-        <div className="slider-div">
+        <div className="slider">
             <SliderContent
                 translate={translate}
                 transition={transition}
@@ -115,4 +115,4 @@ Slider.defaultProps = {
     slides: [],
 };
 
-export default Slider;
+export default React.memo(Slider);

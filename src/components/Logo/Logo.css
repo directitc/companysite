@@ -1,9 +1,9 @@
-.logo {
+.logo__full {
     width: 467px;
     z-index: 12;
 }
 
-.logo-div {
+.logo {
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -11,32 +11,26 @@
     justify-content: center;
 }
 
-.logo-text {
+.logo__text {
     width: 100%;
     margin: auto;
     z-index: 12;
 }
 
-.logo-circle {
+.logo__circle {
     width: 50%;
     margin: auto;
     z-index: 12;
 }
 
 @media (max-width: 600px) {
-    .logo {
+    .logo__full {
         display: none;
     }
 }
 
 @media (min-width: 601px) {
-    .logo-div {
-        display: none;
-    }
-    .logo-circle {
-        display: none;
-    }
-    .logo-text {
+    .logo {
         display: none;
     }
 }

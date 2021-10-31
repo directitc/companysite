@@ -1,4 +1,4 @@
-.side-drawer {
+.sidedrawer {
     position: fixed;
     width: 325px;
     max-width: 80%;
@@ -13,20 +13,20 @@
 }
 
 @media (min-width: 768px) {
-    .side-drawer {
+    .sidedrawer {
         display: none;
     }
 }
 
-.side-drawer-open {
+.sidedrawer__open {
     transform: translateX(0);
 }
 
-.side-drawer-close {
+.sidedrawer__close {
     transform: translateX(-100%);
 }
 
-.sidedrawer-nav-item {
+.sidedrawer__link {
     border-top: .1rem solid white;
     margin: 1rem;
     box-sizing: border-box;
@@ -34,7 +34,7 @@
     height: 100%;
 }
 
-.sidedrawer-nav-item a {
+.sidedrawer__link a {
     border-bottom: .1rem solid white;
     color: white;
     text-decoration: none;
@@ -45,8 +45,8 @@
     font-size: 2.4rem;
 }
 
-.sidedrawer-nav-item a:hover,
-.sidedrawer-nav-item a:active,
-.sidedrawer-nav-item a.active {
+.sidedrawer__link a:hover,
+.sidedrawer__link a:active,
+.sidedrawer__link a.active {
     color: rgba(190, 183, 124, 1);
 }

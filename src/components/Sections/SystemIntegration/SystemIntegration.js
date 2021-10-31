@@ -22,13 +22,13 @@ const SystemIntegration = () => {
 
     for (let i = 0; i < bulletedList.length; i++) {
         bullets.push(
-            <div className="system-integration-list">
+            <div className="system-integration__list">
                 <Icon
-                    classStyle="system-integration-icon"
+                    classStyle="system-integration__icon"
                     icon={<FaDotCircle />}
                 />
                 <Text
-                    classStyle="system-integration-text"
+                    classStyle="system-integration__text"
                     text={bulletedList[i]}
                 />
             </div>
@@ -36,27 +36,22 @@ const SystemIntegration = () => {
     }
 
     return (
-        <div
-            id="system-integration"
-            className="w3-padding-64 w3-container system-integration"
-        >
-            <div className="w3-content system-integration-section">
-                <div className="w3-third w3-center w3-padding-small w3-padding-32">
-                    <Image
-                        classStyle="system-integration-image"
-                        src={SystemIntegrationImage}
-                    />
-                </div>
-                <div className="w3-twothird w3-padding-large w3-padding-32">
-                    <Title
-                        classStyle="title title-fstart title-dark-gray"
-                        title={systemIntegrationTitle}
-                    />
-                    {bullets}
-                </div>
+        <div id="system-integration" className="system-integration">
+            <div className="system-integration__img-div">
+                <Image
+                    classStyle="system-integration__img"
+                    src={SystemIntegrationImage}
+                />
+            </div>
+            <div className="system-integration__textbox">
+                <Title
+                    classStyle="data-migration__title"
+                    title={systemIntegrationTitle}
+                />
+                {bullets}
             </div>
         </div>
     );
 };
 
-export default SystemIntegration;
+export default React.memo(SystemIntegration);

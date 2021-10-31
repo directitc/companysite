@@ -1,5 +1,4 @@
 import React from 'react';
-import './Link.css';
 
 const Link = ({ classStyle, href, link }) => {
     return (
@@ -9,4 +8,4 @@ const Link = ({ classStyle, href, link }) => {
     );
 };
 
-export default Link;
+export default React.memo(Link);

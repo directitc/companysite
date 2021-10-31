@@ -3,45 +3,42 @@ import Title from '../../UI/Title/Title';
 import Subtitle from '../../UI/Subtitle/Subtitle';
 import Image from '../../UI/Image/Image';
 import Button from '../../UI/Button/Button';
-import DataMigration from '../../../assets/images/services-data-migration.png';
-import DataAnalytics from '../../../assets/images/services-data-analytics.png';
-import SystemIntegration from '../../../assets/images/services-system-integration.png';
+import DataMigrationImg from '../../../assets/images/services-data-migration.png';
+import DataAnalyticsImg from '../../../assets/images/services-data-analytics.png';
+import SystemIntegrationImg from '../../../assets/images/services-system-integration.png';
 import './Services.css';
 
 const Services = () => {
     const servicesTitle = 'Our Services';
     const servicesButton = 'Learn More';
-    const servicesSubtitle1 = 'Data Migration';
-    const servicesSubtitle2 = 'Data Analytics';
-    const servicesSubtitle3 = 'System Integration';
+
+    let services = [];
+    const images = [DataMigrationImg, DataAnalyticsImg, SystemIntegrationImg];
+    const subtitles = [
+        'Data Migration',
+        'Data Analytics',
+        'System Integration',
+    ];
+
+    for (let i = 0; i < images.length; i++) {
+        services.push(
+            <div className="services-section__img-text">
+                <Image classStyle="services-section__img" src={images[i]} />
+                <Subtitle
+                    classStyle="services-section__subtitle"
+                    subtitle={subtitles[i]}
+                />
+            </div>
+        );
+    }
 
     return (
-        <div className="w3-padding-64 w3-container services-background">
-            <Title classStyle="title" title={servicesTitle} />
-            <div className="w3-third w3-center w3-padding-16">
-                <Image classStyle="w3-image" src={DataMigration} />
-                <Subtitle
-                    classStyle="services-subtitle"
-                    subtitle={servicesSubtitle1}
-                />
-            </div>
-            <div className="w3-third w3-center w3-padding-16">
-                <Image classStyle="w3-image" src={DataAnalytics} />
-                <Subtitle
-                    classStyle="services-subtitle"
-                    subtitle={servicesSubtitle2}
-                />
-            </div>
-            <div className="w3-third w3-center w3-padding-16">
-                <Image classStyle="w3-image" src={SystemIntegration} />
-                <Subtitle
-                    classStyle="services-subtitle"
-                    subtitle={servicesSubtitle3}
-                />
-            </div>
-            <div className="services-btn-wrapper w3-padding-16">
+        <div className="services-section">
+            <Title classStyle="services-section__title" title={servicesTitle} />
+            {services}
+            <div className="services-section__btn-div">
                 <Button
-                    classStyle="btn w3-large"
+                    classStyle="services-section__btn"
                     name={servicesButton}
                     type="button"
                     link="/services"
@@ -51,4 +48,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default React.memo(Services);

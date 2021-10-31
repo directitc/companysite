@@ -22,15 +22,17 @@ const Navigation = () => {
     };
 
     return (
-        <div className="navigation">
-            <Logo />
-            <NavBar drawerToggleClicked={sideDrawerToggleHandler} />
-            <SideDrawer
-                open={state.showSideDrawer}
-                closed={sideDrawerClosedHandler}
-            />
+        <div className="navigation__outer-box">
+            <div className="navigation__inner-box">
+                <Logo />
+                <NavBar drawerToggleClicked={sideDrawerToggleHandler} />
+                <SideDrawer
+                    open={state.showSideDrawer}
+                    closed={sideDrawerClosedHandler}
+                />
+            </div>
         </div>
     );
 };
 
-export default Navigation;
+export default React.memo(Navigation);

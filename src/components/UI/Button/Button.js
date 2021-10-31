@@ -1,6 +1,5 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import './Button.css';
 
 const Button = ({ classStyle, name, type, link }) => {
     let btnType;
@@ -22,4 +21,4 @@ const Button = ({ classStyle, name, type, link }) => {
     return btnType;
 };
 
-export default Button;
+export default React.memo(Button);

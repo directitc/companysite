@@ -1,8 +1,11 @@
-.copyright-background {
+.copyright__background {
     background-color: #333333;
+    padding: 0.01em 3.2rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
 }
 
-.copyright-text {
+.copyright__text {
     color: rgba(255, 255, 255, 0.66);
     display: flex;
     justify-content: center;
@@ -10,7 +13,7 @@
 }
 
 @media (max-width: 550px) {
-    .copyright-text {
+    .copyright__text {
         font-size: 1rem;
     }
 }

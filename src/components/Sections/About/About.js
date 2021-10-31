@@ -13,32 +13,24 @@ const AboutSection = () => {
     const aboutButton = 'Read More';
 
     return (
-        <div className="w3-padding-64 w3-container">
-            <div className="w3-content about-section">
-                <div className="w3-third w3-center w3-padding-small w3-padding-32">
-                    <Image classStyle="about-image" src={AboutUsImage} />
-                </div>
-                <div className="w3-twothird w3-padding-large w3-padding-32">
-                    <Title
-                        classStyle="title title-fstart title-dark-gray"
-                        title={aboutTitle}
+        <div className="about-section">
+            <div className="about-section__img-div">
+                <Image classStyle="about-section__img" src={AboutUsImage} />
+            </div>
+            <div className="about-section__textbox">
+                <Title classStyle="about-section__title" title={aboutTitle} />
+                <Text classStyle="about-section__text" text={aboutText} />
+                <div className="about-section__btn-div">
+                    <Button
+                        classStyle="about-section__btn"
+                        name={aboutButton}
+                        type="button"
+                        link="/about"
                     />
-                    <Text
-                        classStyle="about-text w3-padding-16"
-                        text={aboutText}
-                    />
-                    <div className="about-btn-wrapper">
-                        <Button
-                            classStyle="btn w3-large"
-                            name={aboutButton}
-                            type="button"
-                            link="/about"
-                        />
-                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default AboutSection;
+export default React.memo(AboutSection);
