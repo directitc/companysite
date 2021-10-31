@@ -32,7 +32,7 @@
 
 @media (max-width: 768px) {
     .home {
-        height: 46vh;
+        height: 44rem;
     }
     .home__footer {
         flex-direction: column;

@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: flex-end;
     width: 100%;
-    height: 57vh;
+    height: 54rem;
     padding-bottom: 6.4rem;
 }
 
@@ -110,7 +110,7 @@
     .slide__div {
         justify-content: center;
         width: 100%;
-        height: 46vh;
+        height: 44rem;
         padding-bottom: 5rem;
     }
 
@@ -123,7 +123,7 @@
 
 @media (max-width: 600px) {
     .slide__div {
-        height: 46vh;
+        height: 44rem;
         padding-bottom: 0;
     }
     .slide__textbox {
