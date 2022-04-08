@@ -9,7 +9,7 @@ import './About.css';
 const AboutSection = () => {
     const aboutTitle = 'About Us';
     const aboutText =
-        'Direct IT Consulting provides exceptional service to businesses across the United States with 25+ years of industry experience. Team members throughout the country colaborate remotely to ensure timely and high quality results. We tailor our knowledge and expertise to fit the needs of our clients.';
+        'Direct IT Consulting provides exceptional service to businesses across the United States with 25+ years of industry experience. Team members throughout the country collaborate remotely to ensure timely and high quality results. We tailor our knowledge and expertise to fit the needs of our clients.';
     const aboutButton = 'Read More';
 
     return (
